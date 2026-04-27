@@ -1,24 +1,7 @@
 <script lang="ts">
 	import PostCard from '$lib/components/site/PostCard.svelte';
-	// GSAP disabled due to 500 error - needs separate investigation
-	// import gsap from 'gsap';
-	// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-	// import { onMount } from 'svelte';
 
 	let { data } = $props();
-
-	let heroRef: HTMLElement | undefined = $state();
-	let cardsRef: HTMLElement | undefined = $state();
-	let cardLayouts = $state<Array<{ x: number; y: number; r: number }>>([]);
-
-	// Generate card layouts without GSAP
-	$effect(() => {
-		cardLayouts = data.allPosts.map(() => ({
-			x: (Math.random() - 0.5) * 1.6,
-			y: (Math.random() - 0.5) * 0.9,
-			r: (Math.random() - 0.5) * 4.6
-		}));
-	});
 </script>
 
 <svelte:head>
@@ -53,12 +36,9 @@
 			</p>
 		</div>
 
-		<div bind:this={cardsRef} class="desk-grid shell">
+		<div class="desk-grid shell">
 			{#each data.allPosts as post, i}
-				<div
-					class="desk-post"
-					style={`--desk-x: ${cardLayouts[i]?.x ?? 0}rem; --desk-y: ${cardLayouts[i]?.y ?? 0}rem; --desk-r: ${cardLayouts[i]?.r ?? 0}deg;`}
-				>
+				<div class="desk-post">
 					<PostCard {post} index={i} />
 				</div>
 			{/each}

@@ -102,18 +102,13 @@
 	}
 
 	.desk-grid {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: clamp(1.1rem, 3vw, 2.6rem);
-		align-items: stretch;
+		column-count: 2;
+		column-gap: clamp(1.1rem, 3vw, 2.6rem);
 	}
 
 	.desk-post {
-		height: clamp(22rem, 35vw, 28rem);
-		transform: translate(var(--desk-x), var(--desk-y)) rotate(var(--desk-r));
-		transition: transform 0.24s ease;
-		content-visibility: auto;
-		contain-intrinsic-size: 420px;
+		break-inside: avoid;
+		margin-bottom: clamp(1.1rem, 3vw, 2.6rem);
 	}
 
 	.rich-content {
@@ -179,12 +174,11 @@
 
 @media (max-width: 760px) {
 	.desk-grid {
-		grid-template-columns: 1fr;
-		gap: 1.25rem;
+		column-count: 1;
+		column-gap: 1.25rem;
 	}
 
 	.desk-post {
-		height: 22rem;
-		transform: translate(calc(var(--desk-x) * 0.25), calc(var(--desk-y) * 0.35)) rotate(calc(var(--desk-r) * 0.45));
+		margin-bottom: 1.25rem;
 	}
 }
