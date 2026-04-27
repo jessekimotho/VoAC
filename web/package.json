@@ -11,6 +11,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"import:migration": "node --env-file=.env.local scripts/import-migration.mjs",
+		"import:comments": "node --env-file=.env.local scripts/import-comments.mjs",
 		"audit:links": "node --env-file=.env.local scripts/audit-links.mjs",
 		"fix:links": "node --env-file=.env.local scripts/audit-links.mjs --fix"
 	},

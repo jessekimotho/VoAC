@@ -89,13 +89,16 @@
 	.editor-form {
 		display: grid;
 		gap: 1rem;
+		min-width: 0;
+		max-width: 100%;
 	}
 
 	.top-grid {
 		display: grid;
-		grid-template-columns: 1fr 220px 160px 120px;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 220px) minmax(0, 160px) minmax(0, 120px);
 		gap: 0.8rem;
 		align-items: end;
+		min-width: 0;
 	}
 
 	.wide {
@@ -105,6 +108,7 @@
 	label {
 		display: grid;
 		gap: 0.35rem;
+		min-width: 0;
 		color: #514d47;
 		font-size: 0.9rem;
 		font-weight: 800;
@@ -120,6 +124,7 @@
 		background: #fffdfa;
 		padding: 0.75rem;
 		color: #1b1b19;
+		min-width: 0;
 	}
 
 	textarea {
@@ -139,6 +144,7 @@
 
 	.actions {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 1rem;
 	}

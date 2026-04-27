@@ -17,6 +17,8 @@
 <style>
 	.edit-page {
 		padding-top: 3rem;
+		min-width: 0;
+		max-width: min(1120px, calc(100vw - 32px));
 	}
 
 	h1 {
@@ -26,4 +28,3 @@
 		line-height: 0.92;
 	}
 </style>
-

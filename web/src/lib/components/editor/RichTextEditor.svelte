@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 	import { Editor } from '@tiptap/core';
 	import StarterKit from '@tiptap/starter-kit';
 	import Link from '@tiptap/extension-link';
@@ -10,9 +10,7 @@
 	let element: HTMLDivElement;
 	let editor: Editor | null = null;
 
-	$effect(() => {
-		if (!browser || editor || !element) return;
-
+	onMount(() => {
 		editor = new Editor({
 			element,
 			extensions: [
@@ -89,7 +87,12 @@
 	}
 
 	.editor {
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
 		min-height: 480px;
+		overflow-x: auto;
 		padding: 1rem;
 		border: 1px solid rgba(44, 42, 38, 0.14);
 		border-radius: 0 0 8px 8px;
@@ -97,10 +100,26 @@
 	}
 
 	:global(.ProseMirror) {
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 100%;
 		min-height: 450px;
 		outline: none;
 		font-family: Georgia, "Times New Roman", serif;
 		font-size: 1.08rem;
 		line-height: 1.75;
+		overflow-wrap: anywhere;
+		word-break: break-word;
+	}
+
+	:global(.ProseMirror img) {
+		max-width: 100%;
+		height: auto;
+	}
+
+	:global(.ProseMirror pre) {
+		max-width: 100%;
+		overflow-x: auto;
+		white-space: pre-wrap;
 	}
 </style>
