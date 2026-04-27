@@ -10,25 +10,29 @@
 	<p class="eyebrow">Studio</p>
 	<h1>Editorial cockpit</h1>
 	<p class="muted">
-		This is the placeholder for the editor area: login, post list, Tiptap editing, media uploads,
-		and comment moderation.
+		Edit migrated posts, create new drafts, publish updates, and keep the archive tidy.
 	</p>
 
-	<div class="status">
-		<strong>Supabase service connection</strong>
-		<span class:ready={data.hasSupabaseServiceEnv}>
-			{data.hasSupabaseServiceEnv ? 'Ready' : 'Waiting for env vars'}
-		</span>
+	<div class="stats">
+		<div><strong>{data.counts.total}</strong><span>Total</span></div>
+		<div><strong>{data.counts.published}</strong><span>Published</span></div>
+		<div><strong>{data.counts.draft}</strong><span>Drafts</span></div>
+		<div><strong>{data.counts.archived}</strong><span>Archived</span></div>
 	</div>
 
 	<section>
-		<h2>Next studio modules</h2>
-		<ul>
-			<li>Auth guard using Supabase Auth profiles and editor roles.</li>
-			<li>Post table with draft/published/archive filters.</li>
-			<li>Tiptap rich editor with image picker and publish controls.</li>
-			<li>Comment moderation queue for pending replies.</li>
-		</ul>
+		<div class="section-title">
+			<h2>Recently updated</h2>
+			<a href="/studio/posts">View all</a>
+		</div>
+		<div class="recent">
+			{#each data.recent as post}
+				<a href={`/studio/posts/${post.id}`}>
+					<span>{post.status}</span>
+					<strong>{post.title}</strong>
+				</a>
+			{/each}
+		</div>
 	</section>
 </main>
 
@@ -45,7 +49,7 @@
 		line-height: 0.94;
 	}
 
-	.status,
+	.stats,
 	section {
 		margin-top: 2rem;
 		padding: 1rem;
@@ -54,19 +58,36 @@
 		background: rgba(255, 255, 255, 0.52);
 	}
 
-	.status {
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 0.8rem;
 	}
 
-	.status span {
+	.stats div {
+		display: grid;
+		gap: 0.2rem;
+	}
+
+	.stats strong {
+		font-family: Georgia, "Times New Roman", serif;
+		font-size: 2.2rem;
+		line-height: 1;
+	}
+
+	.stats span,
+	.recent span {
 		color: #9d3d2f;
 		font-weight: 800;
+		text-transform: uppercase;
+		font-size: 0.76rem;
 	}
 
-	.status span.ready {
-		color: #276749;
+	.section-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
 	}
 
 	h2 {
@@ -74,7 +95,21 @@
 		font-family: Georgia, "Times New Roman", serif;
 	}
 
-	li {
-		margin: 0.5rem 0;
+	.recent {
+		display: grid;
+		gap: 0.7rem;
+	}
+
+	.recent a {
+		display: grid;
+		gap: 0.2rem;
+		padding-top: 0.7rem;
+		border-top: 1px solid rgba(44, 42, 38, 0.12);
+	}
+
+	@media (max-width: 680px) {
+		.stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 </style>
