@@ -2,18 +2,18 @@
 
 ## Repo Setup
 
-- [ ] Run `git init`.
-- [ ] Scaffold SvelteKit into `web/`.
-- [ ] Add Vercel adapter.
+- [x] Run `git init`.
+- [x] Scaffold SvelteKit into `web/`.
+- [x] Add Vercel adapter.
 - [ ] Add Supabase env vars to `.env.local`.
 - [ ] Create Supabase project.
 - [ ] Run `supabase/schema.sql`.
 
 ## Public Site
 
-- [ ] Blog homepage.
-- [ ] Post archive.
-- [ ] Post detail pages.
+- [x] Blog homepage.
+- [x] Post archive.
+- [x] Post detail pages.
 - [ ] Category pages.
 - [ ] Tag pages.
 - [ ] SEO metadata.
@@ -21,11 +21,11 @@
 
 ## Comments
 
-- [ ] Comment form.
+- [x] Comment form.
 - [ ] Reply form.
-- [ ] Server validation.
-- [ ] Pending-by-default insert.
-- [ ] Approved comment tree rendering.
+- [x] Server validation.
+- [x] Pending-by-default insert.
+- [x] Approved comment tree rendering.
 - [ ] Studio moderation queue.
 
 ## Editor
@@ -41,11 +41,10 @@
 
 ## Migration
 
-- [ ] Import categories.
-- [ ] Import tags.
-- [ ] Import posts/pages.
+- [x] Import categories.
+- [x] Import tags.
+- [x] Import posts/pages.
 - [ ] Import comments.
 - [ ] Download WordPress media.
 - [ ] Upload media to Supabase Storage.
 - [ ] Rewrite old media URLs.
-

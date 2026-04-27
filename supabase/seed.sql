@@ -1,0 +1,3 @@
+-- Intentionally empty for now.
+-- The WordPress migration is imported through web/scripts/import-migration.mjs
+-- after the hosted Supabase project is linked and env vars are configured.

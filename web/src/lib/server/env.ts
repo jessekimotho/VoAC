@@ -1,18 +1,14 @@
-import {
-	PUBLIC_SUPABASE_PUBLISHABLE_KEY,
-	PUBLIC_SUPABASE_URL
-} from '$env/static/public';
-import { SUPABASE_SERVICE_ROLE_KEY } from '$env/static/private';
+import { env as privateEnv } from '$env/dynamic/private';
+import { env as publicEnv } from '$env/dynamic/public';
 
 export const hasSupabasePublicEnv = Boolean(
-	PUBLIC_SUPABASE_URL && PUBLIC_SUPABASE_PUBLISHABLE_KEY
+	publicEnv.PUBLIC_SUPABASE_URL && publicEnv.PUBLIC_SUPABASE_PUBLISHABLE_KEY
 );
 
 export const hasSupabaseServiceEnv = Boolean(
-	PUBLIC_SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY
+	publicEnv.PUBLIC_SUPABASE_URL && privateEnv.SUPABASE_SERVICE_ROLE_KEY
 );
 
-export const supabaseUrl = PUBLIC_SUPABASE_URL;
-export const supabasePublishableKey = PUBLIC_SUPABASE_PUBLISHABLE_KEY;
-export const supabaseServiceRoleKey = SUPABASE_SERVICE_ROLE_KEY;
-
+export const supabaseUrl = publicEnv.PUBLIC_SUPABASE_URL;
+export const supabasePublishableKey = publicEnv.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+export const supabaseServiceRoleKey = privateEnv.SUPABASE_SERVICE_ROLE_KEY;

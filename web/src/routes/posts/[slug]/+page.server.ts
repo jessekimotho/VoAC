@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { listApprovedComments } from '$lib/server/comments';
+import { hasSupabaseServiceEnv } from '$lib/server/env';
 import { getPublishedPost, listPublishedPosts } from '$lib/server/posts';
 
 export async function load({ params }) {
@@ -17,7 +18,7 @@ export async function load({ params }) {
 	return {
 		post,
 		comments,
-		related: related.filter((item) => item.slug !== post.slug).slice(0, 3)
+		related: related.filter((item) => item.slug !== post.slug).slice(0, 3),
+		canSubmitComments: hasSupabaseServiceEnv
 	};
 }
-

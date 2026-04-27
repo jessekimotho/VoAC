@@ -41,22 +41,29 @@
 			<p class="muted">New comments are held for moderation once Supabase is connected.</p>
 		</div>
 
-		<form method="POST" action="/api/comments" class="comment-form">
-			<input type="hidden" name="postId" value={data.post.id} />
-			<label>
-				Name
-				<input name="authorName" required minlength="2" maxlength="80" />
-			</label>
-			<label>
-				Email
-				<input name="authorEmail" type="email" />
-			</label>
-			<label>
-				Comment
-				<textarea name="body" required minlength="3" maxlength="4000"></textarea>
-			</label>
-			<button>Submit for moderation</button>
-		</form>
+		{#if data.canSubmitComments}
+			<form method="POST" action={`/api/comments?returnTo=/posts/${data.post.slug}`} class="comment-form">
+				<input type="hidden" name="postId" value={data.post.id} />
+				<label>
+					Name
+					<input name="authorName" required minlength="2" maxlength="80" />
+				</label>
+				<label>
+					Email
+					<input name="authorEmail" type="email" />
+				</label>
+				<label>
+					Comment
+					<textarea name="body" required minlength="3" maxlength="4000"></textarea>
+				</label>
+				<button>Submit for moderation</button>
+			</form>
+		{:else}
+			<p class="notice">
+				Comment posting will switch on after Supabase env vars are added. The UI is wired; the
+				database needs its keys.
+			</p>
+		{/if}
 
 		<CommentList comments={data.comments} />
 	</section>
@@ -118,6 +125,16 @@
 		border-radius: 8px;
 	}
 
+	.notice {
+		margin: 0;
+		padding: 1rem;
+		border: 1px solid rgba(157, 61, 47, 0.22);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.52);
+		color: #5e5a52;
+		line-height: 1.55;
+	}
+
 	label {
 		display: grid;
 		gap: 0.35rem;
@@ -158,4 +175,3 @@
 		}
 	}
 </style>
-

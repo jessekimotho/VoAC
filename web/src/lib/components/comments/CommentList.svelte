@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { CommentNode } from '$lib/server/types';
+	import CommentList from './CommentList.svelte';
 
 	let { comments }: { comments: CommentNode[] } = $props();
 </script>
@@ -18,7 +19,7 @@
 
 				{#if comment.replies.length}
 					<div class="replies">
-						<svelte:self comments={comment.replies} />
+						<CommentList comments={comment.replies} />
 					</div>
 				{/if}
 			</li>

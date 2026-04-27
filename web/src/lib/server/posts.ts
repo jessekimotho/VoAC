@@ -48,7 +48,7 @@ export async function listPublishedPosts(limit = 12) {
 	const { data, error } = await supabase
 		.from('posts')
 		.select(
-			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories(name,slug)'
+			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)'
 		)
 		.eq('status', 'published')
 		.eq('post_type', 'post')
@@ -69,7 +69,7 @@ export async function listAllPublishedPosts() {
 	const { data, error } = await supabase
 		.from('posts')
 		.select(
-			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories(name,slug)'
+			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)'
 		)
 		.eq('status', 'published')
 		.eq('post_type', 'post')
@@ -88,7 +88,7 @@ export async function getPublishedPost(slug: string) {
 	const { data, error } = await supabase
 		.from('posts')
 		.select(
-			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories(name,slug)'
+			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)'
 		)
 		.eq('status', 'published')
 		.eq('post_type', 'post')
@@ -100,4 +100,3 @@ export async function getPublishedPost(slug: string) {
 
 	return normalize(data as unknown as PostRow);
 }
-
