@@ -1,35 +1,42 @@
-# Voice of an African Child
+# sv
 
-Repo blueprint for rebuilding the old WordPress site as a SvelteKit app on Vercel with Supabase for auth, content, comments, and media storage.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Current State
+## Creating a project
 
-- SvelteKit app lives in `web/`.
-- Original WordPress WXR exports live in this folder.
-- Processed migration output lives in `migration_export/`.
-- Export/reprocessing scripts live in `tools/`.
-- Architecture and build plan live in `docs/`.
-- Supabase starter schema lives in `supabase/schema.sql`.
-- Supabase CLI notes live in `docs/SUPABASE_CLI.md`.
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Target Stack
+```sh
+# create a new project
+npx sv create my-app
+```
 
-- SvelteKit + TypeScript
-- Vercel deployment with `@sveltejs/adapter-vercel`
-- Supabase Postgres, Auth, Storage, and optional Realtime
-- Tiptap rich text editor for admin editing
-- HTML/JSON content storage for migrated WordPress posts
+To recreate this project with the same configuration:
 
-## First Build Commands
+```sh
+# recreate this project
+npx sv@0.15.1 create --template minimal --types ts --install npm web
+```
 
-```bash
-cd web
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
 npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-The app currently falls back to `migration_export/content` when Supabase env vars are not present. After creating a Supabase project, run the SQL in `supabase/schema.sql`, add `web/.env.local`, then import the migration:
+## Building
 
-```bash
-cd web
-npm run import:migration
+To create a production version of your app:
+
+```sh
+npm run build
 ```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

@@ -1,15 +1,23 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
 .DS_Store
-node_modules/
-__pycache__/
-.svelte-kit/
-build/
-.vercel/
+Thumbs.db
+
+# Env
 .env
 .env.*
 !.env.example
-.secrets/
-npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-migration_export/media/
-*.psd
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
