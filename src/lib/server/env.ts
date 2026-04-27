@@ -4,10 +4,3 @@ import { env as publicEnv } from '$env/dynamic/public';
 export const supabaseUrl = publicEnv.PUBLIC_SUPABASE_URL;
 export const supabasePublishableKey = publicEnv.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 export const supabaseServiceRoleKey = privateEnv.SUPABASE_SERVICE_ROLE_KEY;
-
-// Log env var status for debugging
-console.log('Environment variables loaded:', {
-	supabaseUrl: !!supabaseUrl,
-	supabasePublishableKey: !!supabasePublishableKey,
-	supabaseServiceRoleKey: !!supabaseServiceRoleKey
-});
