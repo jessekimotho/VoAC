@@ -15,6 +15,25 @@ export function decodeHtmlEntities(text: string): string {
 	for (const [entity, char] of Object.entries(entityMap)) {
 		decoded = decoded.replace(new RegExp(entity, 'g'), char);
 	}
+
+	// Decode decimal numeric entities: &#128514; -> emoji
+	decoded = decoded.replace(/&#(\d+);/g, (_, code) => {
+		try {
+			return String.fromCodePoint(Number(code));
+		} catch {
+			return _;
+		}
+	});
+
+	// Decode hexadecimal numeric entities: &#x1F600; -> emoji
+	decoded = decoded.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+		try {
+			return String.fromCodePoint(parseInt(hex, 16));
+		} catch {
+			return _;
+		}
+	});
+
 	return decoded;
 }
 

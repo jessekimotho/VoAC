@@ -1,5 +1,5 @@
 import { createSupabaseAdmin } from './supabase';
-import { buildCommentTree } from './utils';
+import { buildCommentTree, decodeHtmlEntities } from './utils';
 import type { CommentNode } from './types';
 
 type CommentRow = Omit<CommentNode, 'replies'>;
@@ -14,7 +14,13 @@ export async function listApprovedComments(postId: string) {
 		.order('created_at', { ascending: true });
 
 	if (error) throw error;
-	return buildCommentTree((data ?? []) as CommentRow[]);
+
+	const decoded = (data ?? []).map((row) => ({
+		...row,
+		body: decodeHtmlEntities(row.body)
+	})) as CommentRow[];
+
+	return buildCommentTree(decoded);
 }
 
 export async function createPendingComment(input: {

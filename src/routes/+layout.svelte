@@ -9,35 +9,10 @@
 
 {@render children()}
 
-<footer class="site-footer">
-	<div class="shell footer-inner">
-		<p>Voice of an African Child</p>
-		<p class="muted">Stories unbound. Rebuilt from the old WordPress archive.</p>
+<footer class="mt-20 border-t border-paper-line/60 py-8">
+	<div class="shell flex justify-between gap-4 text-sm text-ink-mid max-sm:grid max-sm:justify-start">
+		<p class="m-0 font-handwritten text-lg text-ink-dark">Voice of an African Child</p>
+		<p class="m-0">Stories unbound. Rebuilt from the old WordPress archive.</p>
 	</div>
 </footer>
-
-<style>
-	.site-footer {
-		margin-top: 5rem;
-		padding: 2rem 0;
-		border-top: 1px solid rgba(44, 42, 38, 0.12);
-	}
-
-	.footer-inner {
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
-		font-size: 0.92rem;
-	}
-
-	.footer-inner p {
-		margin: 0;
-	}
-
-	@media (max-width: 680px) {
-		.footer-inner {
-			display: grid;
-		}
-	}
-</style>
 

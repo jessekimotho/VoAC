@@ -3,7 +3,7 @@ import { decodeHtmlEntities } from './utils';
 import type { BlogPost } from './types';
 
 const POST_SELECT =
-	'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)';
+	'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug),post_tags(tags(name,slug))';
 
 type PostRow = {
 	id: string;
@@ -19,9 +19,14 @@ type PostRow = {
 	original_url: string | null;
 	profiles?: { display_name: string | null } | null;
 	categories?: { name: string; slug: string } | null;
+	post_tags?: Array<{ tags: { name: string; slug: string } | null } | null> | null;
 };
 
 function normalize(row: PostRow): BlogPost {
+	const tags = row.post_tags
+		?.filter((pt): pt is { tags: { name: string; slug: string } } => pt !== null && pt.tags !== null)
+		.map((pt) => pt.tags.name) ?? [];
+
 	return {
 		id: row.id,
 		title: row.title,
@@ -36,7 +41,7 @@ function normalize(row: PostRow): BlogPost {
 		author_name: row.profiles?.display_name ?? 'VoAC',
 		category_name: row.categories?.name ?? null,
 		category_slug: row.categories?.slug ?? null,
-		tags: [],
+		tags,
 		original_url: row.original_url
 	};
 }

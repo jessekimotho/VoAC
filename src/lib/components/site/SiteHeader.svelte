@@ -5,79 +5,24 @@
 	let showLoginModal = $state(false);
 </script>
 
-<header class="site-header">
-	<div class="shell header-inner">
-		<a href="/" class="brand" aria-label="Voice of an African Child home">
-			<span>VoAC</span>
-			<strong>Voice of an African Child</strong>
+<header class="sticky top-0 z-10 border-b border-paper-line/50 bg-paper/80 backdrop-blur-md">
+	<div class="shell flex min-h-17 items-center justify-between gap-4">
+		<a href="/" class="inline-flex items-center gap-3 font-handwritten text-2xl text-ink-dark hover:text-accent-ink transition-colors" aria-label="Voice of an African Child home">
+			<span class="grid h-10.5 w-10.5 place-items-center rounded-full bg-ink-dark text-paper text-sm font-serif font-bold">VoAC</span>
+			<strong class="hidden sm:inline">Voice of an African Child</strong>
 		</a>
 
-		<nav aria-label="Main navigation">
+		<nav aria-label="Main navigation" class="flex items-center gap-4 text-ink-mid text-sm font-serif">
 			{#if data?.authenticated}
-				<a href="/posts/new">New post</a>
+				<a href="/posts/new" class="hover:text-accent-ink transition-colors">New post</a>
 				<form method="POST" action="/api/auth/logout">
-					<button type="submit">Sign out</button>
+					<button type="submit" class="hover:text-accent-ink transition-colors cursor-pointer">Sign out</button>
 				</form>
 			{:else}
-				<button onclick={() => showLoginModal = true}>Sign in</button>
+				<button onclick={() => showLoginModal = true} class="hover:text-accent-ink transition-colors cursor-pointer">Sign in</button>
 			{/if}
 		</nav>
 	</div>
 	<LoginModal bind:open={showLoginModal} />
 </header>
-
-<style>
-	.site-header {
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		background: rgba(247, 244, 237, 0.88);
-		backdrop-filter: blur(14px);
-		border-bottom: 1px solid rgba(44, 42, 38, 0.1);
-	}
-
-	.header-inner {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		min-height: 68px;
-		gap: 1rem;
-	}
-
-	.brand {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.75rem;
-		font-weight: 800;
-	}
-
-	.brand span {
-		display: grid;
-		place-items: center;
-		width: 42px;
-		aspect-ratio: 1;
-		background: #1f2933;
-		color: #f7f4ed;
-		border-radius: 50%;
-		font-size: 0.78rem;
-	}
-
-	nav {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		color: #5e5a52;
-		font-size: 0.94rem;
-	}
-
-	nav a:hover {
-		color: #9d3d2f;
-	}
-
-	@media (max-width: 560px) {
-		.brand strong {
-			display: none;
-		}
-	}
-</style>
 

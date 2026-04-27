@@ -1,7 +1,49 @@
 <script lang="ts">
 	import PostCard from '$lib/components/site/PostCard.svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { onMount } from 'svelte';
 
 	let { data } = $props();
+
+	let heroRef: HTMLElement | undefined = $state();
+	let cardsRef: HTMLElement | undefined = $state();
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+			// Hero entrance animation
+		if (heroRef) {
+			const heroEls = heroRef.querySelectorAll('.hero-animate');
+			gsap.fromTo(
+				heroEls,
+				{ opacity: 0, y: 30, rotate: -1 },
+				{ opacity: 1, y: 0, rotate: 0, duration: 1, stagger: 0.15, ease: 'power3.out' }
+			);
+		}
+
+		// Post cards scroll animation
+		if (cardsRef) {
+			const cards = cardsRef.querySelectorAll('.post-card');
+			gsap.fromTo(
+				cards,
+				{ opacity: 0, y: 50, rotate: Math.random() > 0.5 ? -2 : 2 },
+				{
+					opacity: 1,
+					y: 0,
+					rotate: 0,
+					duration: 0.8,
+					stagger: 0.12,
+					ease: 'power2.out',
+					scrollTrigger: {
+						trigger: cardsRef,
+						start: 'top 80%',
+						toggleActions: 'play none none none'
+					}
+				}
+			);
+		}
+	});
 </script>
 
 <svelte:head>
@@ -12,135 +54,44 @@
 	/>
 </svelte:head>
 
-<main>
-	<section class="hero shell">
-		<div class="hero-copy">
-			<p class="eyebrow">Stories unbound</p>
-			<h1>Voice of an African Child</h1>
-			<p>
+<main class="pt-12">
+	<section bind:this={heroRef} class="shell grid gap-[clamp(1.5rem,4vw,4rem)] pb-12 max-md:grid-cols-1 md:min-h-[min(620px,calc(100vh-88px))] md:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.75fr)] md:items-end">
+		<div class="grid gap-4">
+			<p class="eyebrow hero-animate opacity-0">Stories unbound</p>
+			<h1 class="hero-animate opacity-0 m-0 max-w-190 font-handwritten text-[clamp(3.4rem,11vw,8.7rem)] leading-[0.86] text-ink-dark">
+				Voice of an African Child
+			</h1>
+			<p class="hero-animate opacity-0 m-0 max-w-155 font-serif text-ink-mid leading-relaxed">
 				Essays, travel notes, book reviews, campus stories, and the beautifully stubborn archive
 				of an old WordPress life brought into a new home.
 			</p>
 		</div>
 
 		{#if data.featured}
-			<a class="featured" href={`/posts/${data.featured.slug}`}>
-				<span class="eyebrow">{data.featured.category_name ?? 'Featured'}</span>
-				<h2>{data.featured.title}</h2>
-				<p>{data.featured.excerpt}</p>
-				<strong>Read essay</strong>
+			<a class="hero-animate opacity-0 grid gap-4 rounded-sm border border-paper-line/40 bg-note-1 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md" href={`/posts/${data.featured.slug}`}>
+				<span class="font-handwritten text-xl text-accent-ink">{data.featured.category_name ?? 'Featured'}</span>
+				<h2 class="m-0 font-handwritten text-[clamp(1.8rem,3vw,3rem)] leading-none text-ink-dark">
+					{data.featured.title}
+				</h2>
+				<p class="m-0 font-serif text-ink-mid leading-relaxed">
+					{data.featured.excerpt}
+				</p>
+				<strong class="font-handwritten text-xl text-accent-ink">Read essay &rarr;</strong>
 			</a>
 		{/if}
 	</section>
 
-	<section class="shell content-grid" aria-label="All posts">
-		<div>
-			<div class="section-heading">
-				<p class="eyebrow">All posts</p>
-				<h2>Writing</h2>
-			</div>
+	<section class="shell" aria-label="All posts">
+		<div class="mb-6">
+			<p class="eyebrow">All posts</p>
+			<h2 class="m-0 mt-1 font-handwritten text-4xl text-ink-dark">Writing</h2>
+		</div>
 
-			<div class="post-list">
-				{#each data.allPosts as post}
-					<PostCard {post} />
-				{/each}
-			</div>
+		<div bind:this={cardsRef} class="grid gap-6">
+			{#each data.allPosts as post, i}
+				<PostCard {post} index={i} />
+			{/each}
 		</div>
 	</section>
 </main>
-
-<style>
-	main {
-		padding-top: 3rem;
-	}
-
-	.hero {
-		display: grid;
-		grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
-		gap: clamp(1.5rem, 4vw, 4rem);
-		align-items: end;
-		min-height: min(620px, calc(100vh - 88px));
-		padding-bottom: 3rem;
-	}
-
-	.hero-copy {
-		display: grid;
-		gap: 1rem;
-	}
-
-	h1 {
-		margin: 0;
-		max-width: 760px;
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: clamp(3.4rem, 11vw, 8.7rem);
-		line-height: 0.86;
-		letter-spacing: 0;
-	}
-
-	.hero-copy p:not(.eyebrow) {
-		max-width: 620px;
-		margin: 0;
-		color: #514d47;
-		font-size: 1.08rem;
-		line-height: 1.65;
-	}
-
-	.featured {
-		display: grid;
-		gap: 1rem;
-		padding: 1.4rem;
-		background: #1f2933;
-		color: #f7f4ed;
-		border-radius: 8px;
-		box-shadow: 0 24px 60px rgba(31, 41, 51, 0.18);
-	}
-
-	.featured .eyebrow {
-		color: #f1b15b;
-	}
-
-	.featured h2 {
-		margin: 0;
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: clamp(1.8rem, 3vw, 3rem);
-		line-height: 1;
-	}
-
-	.featured p {
-		margin: 0;
-		color: rgba(247, 244, 237, 0.78);
-		line-height: 1.65;
-	}
-
-	.featured strong {
-		color: #f1b15b;
-	}
-
-	.content-grid {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) 280px;
-		gap: clamp(2rem, 6vw, 5rem);
-		align-items: start;
-	}
-
-	.section-heading {
-		margin-bottom: 1rem;
-	}
-
-	.section-heading h2 {
-		margin: 0.2rem 0 0;
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: 2rem;
-	}
-
-	@media (max-width: 820px) {
-		.hero {
-			grid-template-columns: 1fr;
-		}
-
-		.hero {
-			min-height: auto;
-		}
-	}
-</style>
 

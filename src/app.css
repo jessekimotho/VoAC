@@ -1,91 +1,95 @@
-:root {
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-	color: #1b1b19;
-	background: #f7f4ed;
+@import "tailwindcss";
+
+@theme {
+	--color-ink-dark: #2c2420;
+	--color-ink-mid: #5c4f45;
+	--color-ink-light: #8b7d6f;
+	--color-ink-faint: #b5a99a;
+	--color-accent-ink: #8a3b2c;
+	--color-paper: #f5f0e6;
+	--color-paper-dark: #ebe4d6;
+	--color-paper-line: rgba(180, 160, 130, 0.12);
+	--color-note-1: #fef9e7;
+	--color-note-2: #f0f8e8;
+	--color-note-3: #fdf0f0;
+	--color-note-4: #eef4fa;
+	--font-handwritten: 'Caveat', cursive;
+	--font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+	--font-sans: 'EB Garamond', Georgia, 'Times New Roman', serif;
 }
 
-body {
-	margin: 0;
-	min-width: 320px;
-	overflow-x: hidden;
-	background:
-		linear-gradient(180deg, rgba(247, 244, 237, 0.94), rgba(247, 244, 237, 1)),
-		url('/paper.svg');
+@layer base {
+	body {
+		@apply m-0 min-w-[320px] overflow-x-hidden bg-paper text-ink-dark;
+		font-family: var(--font-serif);
+		background-image:
+			linear-gradient(90deg, transparent 79px, var(--color-paper-line) 79px, var(--color-paper-line) 80px, transparent 80px),
+			linear-gradient(var(--color-paper-line) 1px, transparent 1px),
+			url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+		background-size: 100% 100%, 100% 28px, 200px 200px;
+	}
+
+	a {
+		@apply text-inherit no-underline;
+	}
+
+	button, input, textarea {
+		font: inherit;
+	}
 }
 
-a {
-	color: inherit;
-	text-decoration: none;
-}
+@layer utilities {
+	.shell {
+		@apply mx-auto w-[min(920px,calc(100vw-32px))];
+	}
 
-button,
-input,
-textarea {
-	font: inherit;
-}
+	.font-handwritten {
+		font-family: var(--font-handwritten);
+	}
 
-.shell {
-	width: min(1120px, calc(100vw - 32px));
-	margin: 0 auto;
-}
+	.font-serif {
+		font-family: var(--font-serif);
+	}
 
-.eyebrow {
-	color: #8a3b2c;
-	font-size: 0.76rem;
-	font-weight: 800;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-}
+	.rich-content {
+		@apply min-w-0 max-w-full wrap-break-word;
+		font-family: var(--font-serif);
+		font-size: clamp(1.15rem, 1rem + 0.4vw, 1.35rem);
+		line-height: 1.85;
+	}
 
-.muted {
-	color: #706d66;
-}
+	.rich-content p,
+	.rich-content ul,
+	.rich-content ol,
+	.rich-content blockquote {
+		@apply mb-6;
+	}
 
-.rich-content {
-	min-width: 0;
-	max-width: 100%;
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: clamp(1.08rem, 0.94rem + 0.35vw, 1.22rem);
-	line-height: 1.82;
-	overflow-wrap: anywhere;
-	word-break: break-word;
-}
+	.rich-content a {
+		@apply text-accent-ink underline underline-offset-4;
+		text-decoration-thickness: 1px;
+		text-decoration-style: wavy;
+		transition: text-decoration-thickness 0.2s ease;
+	}
 
-.rich-content p,
-.rich-content ul,
-.rich-content ol,
-.rich-content blockquote {
-	margin: 0 0 1.35rem;
-}
+	.rich-content a:hover {
+		text-decoration-thickness: 2px;
+	}
 
-.rich-content a {
-	color: #9d3d2f;
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-	text-underline-offset: 3px;
-}
+	.rich-content img {
+		@apply mx-auto my-6 block h-auto max-w-full;
+	}
 
-.rich-content img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin: 1.5rem auto;
-}
+	.rich-content iframe,
+	.rich-content video {
+		@apply max-w-full;
+	}
 
-.rich-content iframe,
-.rich-content video {
-	max-width: 100%;
-}
+	.rich-content pre {
+		@apply max-w-full overflow-x-auto whitespace-pre-wrap;
+	}
 
-.rich-content pre {
-	max-width: 100%;
-	overflow-x: auto;
-	white-space: pre-wrap;
-}
-
-.rich-content blockquote {
-	border-left: 3px solid #c6523f;
-	padding-left: 1rem;
-	color: #4a4740;
+	.rich-content blockquote {
+		@apply border-l-[3px] border-accent-ink pl-4 text-ink-mid;
+	}
 }

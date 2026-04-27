@@ -34,6 +34,27 @@ function statusFor(comment) {
 	return comment.approved === '1' ? 'approved' : comment.approved === 'spam' ? 'spam' : 'pending';
 }
 
+function normalizeContent(content) {
+  if (!content) return "";
+  // Decode numeric entities so &#128514; and 😂 match for dedup
+  return content
+    .replace(/&#(\d+);/g, (_, code) => {
+      try {
+        return String.fromCodePoint(Number(code));
+      } catch {
+        return _;
+      }
+    })
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+      try {
+        return String.fromCodePoint(parseInt(hex, 16));
+      } catch {
+        return _;
+      }
+    })
+    .trim();
+}
+
 async function main() {
 	const items = JSON.parse(
 		await readFile(join(process.cwd(), '..', 'migration_export', 'data', 'all-items.json'), 'utf-8')
@@ -62,7 +83,8 @@ async function main() {
 		const idMap = new Map();
 
 		for (const comment of comments) {
-			const commentKey = `${postId}-${comment.author || 'Anonymous'}-${comment.content || ''}-${comment.date}`;
+			const normalizedContent = normalizeContent(comment.content);
+      const commentKey = `${postId}-${comment.author || "Anonymous"}-${normalizedContent}`;
 			if (seenComments.has(commentKey)) {
 				skipped += 1;
 				continue;
