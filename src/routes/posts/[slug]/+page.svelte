@@ -68,7 +68,7 @@
 					<h1 class="m-0 font-handwritten text-[clamp(3.3rem,10vw,8.5rem)] leading-[0.78] text-ink-dark text-pretty">
 						{data.post.title}
 					</h1>
-					<aside class="flex flex-wrap items-center gap-4 border-t border-ink-dark/20 pt-4 font-serif text-sm text-ink-mid">
+					<aside class="flex flex-wrap items-center gap-4 pt-4 font-serif text-sm text-ink-mid">
 						<span class="text-xs font-bold uppercase tracking-[0.22em] text-accent-blue">Archive note</span>
 						<span>•</span>
 						<span>{data.post.author_name ?? 'VoAC'}</span>
