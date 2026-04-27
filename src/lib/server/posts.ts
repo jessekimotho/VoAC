@@ -1,7 +1,9 @@
-import { hasSupabaseServiceEnv } from './env';
-import { getLocalPostBySlug, getLocalPosts } from './local-content';
 import { createSupabaseAdmin } from './supabase';
+import { decodeHtmlEntities } from './utils';
 import type { BlogPost } from './types';
+
+const POST_SELECT =
+	'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)';
 
 type PostRow = {
 	id: string;
@@ -18,24 +20,6 @@ type PostRow = {
 	profiles?: { display_name: string | null } | null;
 	categories?: { name: string; slug: string } | null;
 };
-
-function decodeHtmlEntities(text: string): string {
-	const entityMap: Record<string, string> = {
-		'&nbsp;': ' ',
-		'&amp;': '&',
-		'&lt;': '<',
-		'&gt;': '>',
-		'&quot;': '"',
-		'&#39;': "'",
-		'&apos;': "'"
-	};
-	
-	let decoded = text;
-	for (const [entity, char] of Object.entries(entityMap)) {
-		decoded = decoded.replace(new RegExp(entity, 'g'), char);
-	}
-	return decoded;
-}
 
 function normalize(row: PostRow): BlogPost {
 	return {
@@ -58,16 +42,10 @@ function normalize(row: PostRow): BlogPost {
 }
 
 export async function listPublishedPosts(limit = 12) {
-	if (!hasSupabaseServiceEnv) {
-		return (await getLocalPosts()).slice(0, limit);
-	}
-
 	const supabase = createSupabaseAdmin();
 	const { data, error } = await supabase
 		.from('posts')
-		.select(
-			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)'
-		)
+		.select(POST_SELECT)
 		.eq('status', 'published')
 		.eq('post_type', 'post')
 		.order('featured', { ascending: false })
@@ -79,16 +57,10 @@ export async function listPublishedPosts(limit = 12) {
 }
 
 export async function listAllPublishedPosts() {
-	if (!hasSupabaseServiceEnv) {
-		return getLocalPosts();
-	}
-
 	const supabase = createSupabaseAdmin();
 	const { data, error } = await supabase
 		.from('posts')
-		.select(
-			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)'
-		)
+		.select(POST_SELECT)
 		.eq('status', 'published')
 		.eq('post_type', 'post')
 		.order('published_at', { ascending: false });
@@ -98,16 +70,10 @@ export async function listAllPublishedPosts() {
 }
 
 export async function getPublishedPost(slug: string) {
-	if (!hasSupabaseServiceEnv) {
-		return getLocalPostBySlug(slug);
-	}
-
 	const supabase = createSupabaseAdmin();
 	const { data, error } = await supabase
 		.from('posts')
-		.select(
-			'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug)'
-		)
+		.select(POST_SELECT)
 		.eq('status', 'published')
 		.eq('post_type', 'post')
 		.eq('slug', slug)

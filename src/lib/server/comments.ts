@@ -1,34 +1,10 @@
-import { hasSupabaseServiceEnv } from './env';
-import { getLocalComments } from './local-content';
 import { createSupabaseAdmin } from './supabase';
+import { buildCommentTree } from './utils';
 import type { CommentNode } from './types';
 
 type CommentRow = Omit<CommentNode, 'replies'>;
 
-function buildTree(rows: CommentRow[]): CommentNode[] {
-	const byId = new Map<string, CommentNode>();
-	const roots: CommentNode[] = [];
-
-	for (const row of rows) {
-		byId.set(row.id, { ...row, replies: [] });
-	}
-
-	for (const comment of byId.values()) {
-		if (comment.parent_id && byId.has(comment.parent_id)) {
-			byId.get(comment.parent_id)?.replies.push(comment);
-		} else {
-			roots.push(comment);
-		}
-	}
-
-	return roots;
-}
-
-export async function listApprovedComments(postId: string, slug: string) {
-	if (!hasSupabaseServiceEnv) {
-		return getLocalComments(slug);
-	}
-
+export async function listApprovedComments(postId: string) {
 	const supabase = createSupabaseAdmin();
 	const { data, error } = await supabase
 		.from('comments')
@@ -38,7 +14,7 @@ export async function listApprovedComments(postId: string, slug: string) {
 		.order('created_at', { ascending: true });
 
 	if (error) throw error;
-	return buildTree((data ?? []) as CommentRow[]);
+	return buildCommentTree((data ?? []) as CommentRow[]);
 }
 
 export async function createPendingComment(input: {
@@ -48,10 +24,6 @@ export async function createPendingComment(input: {
 	authorEmail: string | null;
 	body: string;
 }) {
-	if (!hasSupabaseServiceEnv) {
-		throw new Error('Comments need Supabase env vars before they can be saved.');
-	}
-
 	const supabase = createSupabaseAdmin();
 	const { error } = await supabase.from('comments').insert({
 		post_id: input.postId,
