@@ -65,7 +65,7 @@
 					<a href="/" class="eyebrow hover:text-ink-dark transition-colors">&lt;- Home</a>
 				</div>
 				<div class="grid gap-6">
-					<h1 class="m-0 font-handwritten text-[clamp(3.3rem,10vw,8.5rem)] leading-[0.78] text-ink-dark">
+					<h1 class="m-0 font-handwritten text-[clamp(3.3rem,10vw,8.5rem)] leading-[0.78] text-ink-dark text-pretty">
 						{data.post.title}
 					</h1>
 					<aside class="flex flex-wrap items-center gap-4 border-t border-ink-dark/20 pt-4 font-serif text-sm text-ink-mid">
@@ -92,9 +92,9 @@
 				<span class="tape-mark" aria-hidden="true"></span>
 				<div class="relative z-2">
 					<div class="mb-8">
-						<p class="eyebrow">Conversation</p>
-						<h2 id="comments-title" class="m-0 mt-1 font-handwritten text-4xl text-ink-dark">Comments</h2>
-						<p class="mt-2 font-serif text-ink-light">New comments are held for moderation once Supabase is connected.</p>
+						<p class="eyebrow text-pretty">Conversation</p>
+						<h2 id="comments-title" class="m-0 mt-1 font-handwritten text-4xl text-ink-dark text-pretty">Comments</h2>
+						<p class="mt-2 font-serif text-ink-light text-pretty">New comments are held for moderation once Supabase is connected.</p>
 					</div>
 
 					{#if data.canSubmitComments}

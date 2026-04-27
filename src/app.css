@@ -49,6 +49,10 @@
 		@apply mx-auto w-[min(1120px,calc(100vw-32px))];
 	}
 
+	.text-pretty {
+		text-wrap: pretty;
+	}
+
 	.wood-world {
 		min-height: 100svh;
 		background:

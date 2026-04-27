@@ -17,11 +17,11 @@
 		<div class="hero-paper paper-sheet relative isolate grid w-full place-items-center overflow-hidden px-5 py-12 text-center sm:px-10">
 			<div aria-hidden="true" class="absolute left-[7.8%] top-0 h-full w-px bg-margin-red/70"></div>
 			<p class="m-0 font-serif text-xs font-semibold uppercase tracking-[0.34em] text-accent-blue">The archive</p>
-			<h1 class="m-0 max-w-[11ch] font-handwritten text-[clamp(3rem,10vw,8rem)] leading-[0.73] text-ink-dark">
+			<h1 class="m-0 max-w-full font-handwritten text-[clamp(3rem,10vw,8rem)] leading-[0.73] text-ink-dark text-pretty">
 				Voice of an African Child
 			</h1>
 			<div aria-hidden="true" class="mt-4 mb-4 h-px w-[min(280px,60vw)] bg-ink-dark/30"></div>
-			<p class="m-0 font-serif text-sm text-ink-light leading-relaxed">
+			<p class="m-0 font-serif text-sm text-ink-light leading-relaxed max-w-full">
 				Stories unbound from the archive
 			</p>
 		</div>
