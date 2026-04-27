@@ -24,7 +24,7 @@
 
 <article class:compact class="{noteColor} post-card group relative overflow-hidden rounded-[3px] border border-ink-dark/12 p-5 shadow-paper transition-all duration-300 hover:-translate-y-1 hover:shadow-paper-lift sm:p-6">
 	<span class="tape-mark" aria-hidden="true"></span>
-	<a href={`/posts/${post.slug}`} aria-label={`Read ${post.title}`} class="grid gap-4 max-w-full">
+	<a href={`/posts/${post.slug}`} aria-label={`Read ${post.title}`} class="grid gap-4 max-w-full" data-sveltekit-prefetch>
 		<div class="flex items-center justify-between gap-4 font-serif text-sm text-ink-light">
 			<span>{date}</span>
 			<span class="font-handwritten text-lg text-accent-ink">No. {String(index + 1).padStart(2, '0')}</span>

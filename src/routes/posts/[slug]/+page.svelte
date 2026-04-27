@@ -62,7 +62,7 @@
 		<article bind:this={articleRef} class="paper-sheet shell min-w-0 px-[clamp(1.1rem,4vw,4rem)] py-[clamp(1.4rem,5vw,4.5rem)]">
 			<header class="relative mb-10">
 				<div class="mb-8">
-					<a href="/" class="eyebrow hover:text-ink-dark transition-colors">&lt;- Home</a>
+					<a href="/" class="eyebrow hover:text-ink-dark transition-colors" data-sveltekit-prefetch>&lt;- Home</a>
 				</div>
 				<div class="grid gap-6">
 					<h1 class="m-0 font-handwritten text-[clamp(3.3rem,10vw,8.5rem)] leading-[0.78] text-ink-dark text-pretty">

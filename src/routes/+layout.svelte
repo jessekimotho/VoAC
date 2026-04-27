@@ -19,7 +19,7 @@
 			<p class="m-0 text-pretty">An archive laid out across a desk, made for slow reading.</p>
 			{#if data?.authenticated}
 				<div class="flex items-center gap-4 font-serif text-sm font-semibold text-paper/75">
-					<a href="/posts/new" class="hover:text-paper transition-colors">New post</a>
+					<a href="/posts/new" class="hover:text-paper transition-colors" data-sveltekit-prefetch>New post</a>
 					<form method="POST" action="/api/auth/logout">
 						<button type="submit" class="hover:text-paper transition-colors cursor-pointer">Sign out</button>
 					</form>
