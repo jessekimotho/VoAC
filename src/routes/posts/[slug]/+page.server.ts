@@ -15,9 +15,8 @@ export const load: ServerLoad = async ({ params, cookies }) => {
 		error(404, 'Post not found');
 	}
 
-	const [comments, related, studioPost] = await Promise.all([
+	const [comments, studioPost] = await Promise.all([
 		listApprovedComments(post.id),
-		listPublishedPosts(4),
 		hasStudioSession(cookies) ? getStudioPost(post.id) : Promise.resolve(null)
 	]);
 
@@ -26,7 +25,6 @@ export const load: ServerLoad = async ({ params, cookies }) => {
 		studioPost,
 		authenticated: hasStudioSession(cookies),
 		comments,
-		related: related.filter((item) => item.slug !== post.slug).slice(0, 3),
 		canSubmitComments: true
 	};
 };

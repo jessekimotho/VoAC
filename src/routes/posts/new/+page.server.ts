@@ -30,8 +30,7 @@ export const actions: Actions = {
 			contentHtml: content,
 			status,
 			postType: 'post',
-			featured: false,
-			heroImageUrl: null
+			featured: false
 		});
 		
 		redirect(303, `/posts/${slug}`);

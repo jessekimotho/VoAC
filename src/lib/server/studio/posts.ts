@@ -9,7 +9,6 @@ export type StudioPost = {
 	status: 'draft' | 'published' | 'scheduled' | 'archived';
 	post_type: 'post' | 'page';
 	featured: boolean;
-	hero_image_url: string | null;
 	published_at: string | null;
 	updated_at: string;
 	original_url: string | null;
@@ -28,7 +27,7 @@ export async function listStudioPosts() {
 	const supabase = createSupabaseAdmin();
 	const { data, error } = await supabase
 		.from('posts')
-		.select('id,title,slug,excerpt,status,post_type,featured,hero_image_url,published_at,updated_at,original_url')
+		.select('id,title,slug,excerpt,content_html,status,post_type,featured,published_at,updated_at,original_url')
 		.order('updated_at', { ascending: false });
 
 	if (error) throw error;
@@ -57,7 +56,6 @@ export async function saveStudioPost(input: {
 	status: StudioPost['status'];
 	postType: StudioPost['post_type'];
 	featured: boolean;
-	heroImageUrl: string | null;
 }) {
 	const supabase = createSupabaseAdmin();
 	const now = new Date().toISOString();
@@ -70,7 +68,6 @@ export async function saveStudioPost(input: {
 		status: input.status,
 		post_type: input.postType,
 		featured: input.featured,
-		hero_image_url: input.heroImageUrl,
 		published_at: input.status === 'published' ? now : null,
 		updated_at: now
 	};

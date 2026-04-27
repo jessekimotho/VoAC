@@ -1,6 +1,5 @@
 <script lang="ts">
 	import CommentList from '$lib/components/comments/CommentList.svelte';
-	import PostCard from '$lib/components/site/PostCard.svelte';
 	import PostEditorForm from '$lib/components/editor/PostEditorForm.svelte';
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
@@ -17,12 +16,20 @@
 
 	onMount(() => {
 		if (!articleRef) return;
-		const els = articleRef.querySelectorAll('.post-animate');
-		gsap.fromTo(
-			els,
-			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: 'power2.out' }
-		);
+		const root = articleRef;
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (reduceMotion) return;
+
+		const ctx = gsap.context(() => {
+			const els = root.querySelectorAll('.post-animate');
+			gsap.fromTo(
+				els,
+				{ opacity: 0, y: 28, rotate: -0.45 },
+				{ opacity: 1, y: 0, rotate: 0, duration: 0.85, stagger: 0.1, ease: 'power3.out' }
+			);
+		}, root);
+
+		return () => ctx.revert();
 	});
 </script>
 
@@ -31,47 +38,42 @@
 	<meta name="description" content={data.post.excerpt ?? data.post.title} />
 </svelte:head>
 
-<main class="shell grid gap-[clamp(2rem,6vw,5rem)] pt-16 items-start max-lg:grid-cols-1 lg:grid-cols-[minmax(0,760px)_minmax(280px,1fr)]">
+<main class="desk-stage py-10 sm:py-16">
 	{#if data.authenticated && isEditing && data.studioPost}
-		<div class="min-w-0 max-w-[min(1120px,calc(100vw-32px))] pt-12">
+		<div class="shell min-w-0 max-w-[min(1120px,calc(100vw-32px))] pt-12">
 			<p class="eyebrow">Edit mode</p>
 			<h1 class="m-0 mb-6 font-handwritten text-[clamp(2.6rem,7vw,5.8rem)] leading-[0.94] text-ink-dark">Edit post</h1>
 			<PostEditorForm post={data.studioPost} {form} />
 			<button class="mt-4 cursor-pointer rounded-md border-0 bg-transparent px-4 py-2 text-ink-mid font-serif font-bold hover:text-accent-ink transition-colors" onclick={() => isEditing = false}>Cancel</button>
 		</div>
 	{:else}
-		<article bind:this={articleRef} class="min-w-0">
-			<header class="post-animate opacity-0 relative mb-10">
-				<div class="flex items-center gap-3 mb-4">
-					<a href="/" class="eyebrow hover:text-ink-dark transition-colors">&larr; Home</a>
+		<article bind:this={articleRef} class="paper-sheet shell min-w-0 px-[clamp(1.1rem,4vw,4rem)] py-[clamp(1.4rem,5vw,4.5rem)]">
+			<header class="post-animate relative mb-10 opacity-0">
+				<div class="mb-8 flex items-center justify-between gap-3">
+					<a href="/" class="eyebrow hover:text-ink-dark transition-colors">&lt;- Home</a>
 					{#if data.authenticated}
 						<button class="cursor-pointer rounded-md border-0 bg-ink-dark px-4 py-2 text-paper text-xs font-serif font-bold hover:bg-accent-ink transition-colors" onclick={() => isEditing = true}>Edit</button>
 					{/if}
 				</div>
-				<h1 class="post-animate opacity-0 m-0 font-handwritten text-[clamp(2.6rem,7vw,5.8rem)] leading-[0.94] text-ink-dark">
-					{data.post.title}
-				</h1>
-				<p class="post-animate opacity-0 mt-3 font-handwritten text-xl text-ink-light">
-					{date}
-					{#if data.post.category_name}
-						<span class="text-ink-faint"> / </span>
-						<span class="text-accent-ink">{data.post.category_name}</span>
-					{/if}
-				</p>
-				{#if data.post.tags && data.post.tags.length > 0}
-					<div class="post-animate opacity-0 mt-4 flex flex-wrap gap-2">
-						{#each data.post.tags as tag}
-							<span class="rounded-full border border-paper-line/60 bg-paper/60 px-3 py-1 font-handwritten text-base text-ink-mid">{tag}</span>
-						{/each}
-					</div>
-				{/if}
+				<div class="grid gap-7 lg:grid-cols-[minmax(0,1fr)_12rem] lg:items-end">
+					<h1 class="post-animate m-0 max-w-[12ch] font-handwritten text-[clamp(3.3rem,10vw,8.5rem)] leading-[0.78] text-ink-dark opacity-0">
+						{data.post.title}
+					</h1>
+					<aside class="post-animate grid gap-2 border-t border-ink-dark/20 pt-4 font-serif text-sm text-ink-mid opacity-0 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
+						<span class="text-xs font-bold uppercase tracking-[0.22em] text-accent-blue">Archive note</span>
+						<span>{data.post.author_name ?? 'VoAC'}</span>
+						<span>{date}</span>
+					</aside>
+				</div>
 			</header>
 
-			<div class="post-animate opacity-0 rich-content">
+			<div class="post-animate rich-content mx-auto max-w-[760px] opacity-0">
 				{@html data.post.content_html}
 			</div>
+		</article>
 
-			<section class="post-animate opacity-0 mt-16 grid gap-5" aria-labelledby="comments-title">
+		<section class="shell mx-auto mt-16 max-w-[760px] relative z-10" aria-labelledby="comments-title">
+			<div class="grid gap-5 bg-[#fff9c4] p-6 shadow-lg rotate-[-0.5deg] rounded-sm">
 				<div>
 					<p class="eyebrow">Conversation</p>
 					<h2 id="comments-title" class="m-0 mt-1 font-handwritten text-4xl text-ink-dark">Comments</h2>
@@ -80,21 +82,21 @@
 
 				{#if data.canSubmitComments}
 					<form method="POST" action={`/api/comments?returnTo=/posts/${data.post.slug}`} class="grid gap-4 rounded-md border border-paper-line/50 bg-paper-dark/30 p-4">
-						<input type="hidden" name="postId" value={data.post.id} />
-						<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
-							Name
-							<input name="authorName" required minlength="2" maxlength="80" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
-						</label>
-						<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
-							Email
-							<input name="authorEmail" type="email" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
-						</label>
-						<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
-							Comment
-							<textarea name="body" required minlength="3" maxlength="4000" class="w-full min-h-30 resize-y rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors"></textarea>
-						</label>
-						<button class="cursor-pointer rounded-md border-0 bg-ink-dark px-5 py-2.5 text-paper font-serif font-bold hover:bg-accent-ink transition-colors">Submit for moderation</button>
-					</form>
+					<input type="hidden" name="postId" value={data.post.id} />
+					<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
+						Name
+						<input name="authorName" required minlength="2" maxlength="80" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
+					</label>
+					<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
+						Email
+						<input name="authorEmail" type="email" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
+					</label>
+					<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
+						Comment
+						<textarea name="body" required minlength="3" maxlength="4000" class="w-full min-h-30 resize-y rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors"></textarea>
+					</label>
+					<button class="cursor-pointer rounded-md border-0 bg-ink-dark px-5 py-2.5 text-paper font-serif font-bold hover:bg-accent-ink transition-colors">Submit for moderation</button>
+				</form>
 				{:else}
 					<p class="m-0 rounded-md border border-accent-ink/20 bg-paper-dark/30 p-4 font-serif text-ink-mid leading-relaxed">
 						Comment posting will switch on after Supabase env vars are added. The UI is wired; the
@@ -103,17 +105,7 @@
 				{/if}
 
 				<CommentList comments={data.comments} />
-			</section>
-
-			{#if data.related.length}
-				<section class="post-animate opacity-0 mt-16 grid gap-5" aria-labelledby="related-title">
-					<p class="eyebrow">Keep reading</p>
-					<h2 id="related-title" class="m-0 mt-1 font-handwritten text-4xl text-ink-dark">Related posts</h2>
-					{#each data.related as post, i}
-						<PostCard {post} compact index={i} />
-					{/each}
-				</section>
-			{/if}
-		</article>
+			</div>
+		</section>
 	{/if}
 </main>

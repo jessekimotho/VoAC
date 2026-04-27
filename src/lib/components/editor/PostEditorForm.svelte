@@ -59,11 +59,6 @@
 			<textarea name="excerpt">{post.excerpt ?? ''}</textarea>
 		</label>
 
-		<label class="wide">
-			Hero image URL
-			<input name="heroImageUrl" value={post.hero_image_url ?? ''} />
-		</label>
-
 		<label class="check">
 			<input type="checkbox" name="featured" checked={post.featured} />
 			Featured

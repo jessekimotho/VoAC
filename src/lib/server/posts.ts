@@ -3,7 +3,7 @@ import { decodeHtmlEntities } from './utils';
 import type { BlogPost } from './types';
 
 const POST_SELECT =
-	'id,title,slug,excerpt,content_html,status,post_type,featured,hero_image_url,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug),post_tags(tags(name,slug))';
+	'id,title,slug,excerpt,content_html,status,post_type,featured,published_at,original_url,profiles(display_name),categories!posts_primary_category_id_fkey(name,slug),post_tags(tags(name,slug))';
 
 type PostRow = {
 	id: string;
@@ -14,7 +14,6 @@ type PostRow = {
 	status: string;
 	post_type: string;
 	featured: boolean;
-	hero_image_url: string | null;
 	published_at: string | null;
 	original_url: string | null;
 	profiles?: { display_name: string | null } | null;
@@ -36,7 +35,6 @@ function normalize(row: PostRow): BlogPost {
 		status: row.status === 'published' ? 'published' : 'draft',
 		post_type: row.post_type === 'page' ? 'page' : 'post',
 		featured: row.featured,
-		hero_image_url: row.hero_image_url,
 		published_at: row.published_at,
 		author_name: row.profiles?.display_name ?? 'VoAC',
 		category_name: row.categories?.name ?? null,

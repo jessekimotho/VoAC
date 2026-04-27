@@ -6,6 +6,8 @@
 	--color-ink-light: #8b7d6f;
 	--color-ink-faint: #b5a99a;
 	--color-accent-ink: #8a3b2c;
+	--color-accent-blue: #245f73;
+	--color-margin-red: #d65a4a;
 	--color-paper: #f5f0e6;
 	--color-paper-dark: #ebe4d6;
 	--color-paper-line: rgba(180, 160, 130, 0.12);
@@ -20,13 +22,13 @@
 
 @layer base {
 	body {
-		@apply m-0 min-w-[320px] overflow-x-hidden bg-paper text-ink-dark;
+		@apply m-0 min-w-[320px] overflow-x-hidden bg-ink-dark text-ink-dark;
 		font-family: var(--font-serif);
-		background-image:
-			linear-gradient(90deg, transparent 79px, var(--color-paper-line) 79px, var(--color-paper-line) 80px, transparent 80px),
-			linear-gradient(var(--color-paper-line) 1px, transparent 1px),
-			url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-		background-size: 100% 100%, 100% 28px, 200px 200px;
+		text-rendering: optimizeLegibility;
+	}
+
+	::selection {
+		background: rgba(214, 90, 74, 0.22);
 	}
 
 	a {
@@ -36,11 +38,27 @@
 	button, input, textarea {
 		font: inherit;
 	}
+
+	:focus-visible {
+		@apply outline-2 outline-offset-4 outline-accent-blue;
+	}
 }
 
 @layer utilities {
 	.shell {
-		@apply mx-auto w-[min(920px,calc(100vw-32px))];
+		@apply mx-auto w-[min(1120px,calc(100vw-32px))];
+	}
+
+	.wood-world {
+		min-height: 100svh;
+		background:
+			linear-gradient(rgba(36, 16, 7, 0.1), rgba(36, 16, 7, 0.18)),
+			var(--wood-texture),
+			linear-gradient(90deg, #361506, #8b3e18 45%, #4a1f0b);
+		background-color: #55240d;
+		background-repeat: repeat;
+		background-size: auto, 3000px 3000px, auto;
+		background-position: top left;
 	}
 
 	.font-handwritten {
@@ -51,11 +69,58 @@
 		font-family: var(--font-serif);
 	}
 
+	.eyebrow {
+		@apply m-0 font-serif text-xs font-bold uppercase tracking-[0.24em] text-paper/90;
+	}
+
+	.paper-sheet {
+		background:
+			linear-gradient(90deg, transparent 68px, rgba(214, 90, 74, 0.34) 69px, transparent 70px),
+			linear-gradient(rgba(36, 95, 115, 0.12) 1px, transparent 1px),
+			linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(248, 244, 232, 0.96));
+		background-size: 100% 100%, 100% 30px, 100% 100%;
+		border: 1px solid rgba(44, 36, 32, 0.16);
+		box-shadow:
+			0 1px 0 rgba(255, 255, 255, 0.8) inset,
+			0 28px 80px rgba(44, 36, 32, 0.14),
+			0 6px 18px rgba(44, 36, 32, 0.08);
+	}
+
+	.shadow-paper {
+		box-shadow: 0 18px 45px rgba(44, 36, 32, 0.1), 0 1px 0 rgba(255, 255, 255, 0.75) inset;
+	}
+
+	.shadow-paper-lift {
+		box-shadow: 0 26px 60px rgba(44, 36, 32, 0.16), 0 1px 0 rgba(255, 255, 255, 0.75) inset;
+	}
+
+	.desk-stage {
+		position: relative;
+		isolation: isolate;
+		min-height: 100svh;
+		box-shadow: 0 -40px 90px rgba(18, 8, 3, 0.12) inset;
+	}
+
+	.desk-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: clamp(1.1rem, 3vw, 2.6rem);
+		align-items: stretch;
+	}
+
+	.desk-post {
+		height: clamp(22rem, 35vw, 28rem);
+		transform: translate(var(--desk-x), var(--desk-y)) rotate(var(--desk-r));
+		transition: transform 0.24s ease;
+		content-visibility: auto;
+		contain-intrinsic-size: 420px;
+	}
+
 	.rich-content {
-		@apply min-w-0 max-w-full wrap-break-word;
+		@apply min-w-0 max-w-full wrap-break-word text-ink-dark;
 		font-family: var(--font-serif);
-		font-size: clamp(1.15rem, 1rem + 0.4vw, 1.35rem);
-		line-height: 1.85;
+		font-size: clamp(1.18rem, 1.02rem + 0.48vw, 1.42rem);
+		line-height: 1.9;
 	}
 
 	.rich-content p,
@@ -68,7 +133,6 @@
 	.rich-content a {
 		@apply text-accent-ink underline underline-offset-4;
 		text-decoration-thickness: 1px;
-		text-decoration-style: wavy;
 		transition: text-decoration-thickness 0.2s ease;
 	}
 
@@ -90,6 +154,37 @@
 	}
 
 	.rich-content blockquote {
-		@apply border-l-[3px] border-accent-ink pl-4 text-ink-mid;
+		@apply border-l-[3px] border-margin-red pl-5 text-ink-mid;
+		font-style: italic;
+	}
+
+	.rich-content h2,
+	.rich-content h3 {
+		@apply font-handwritten text-ink-dark;
+		line-height: 1;
+	}
+
+	.rich-content h2 {
+		font-size: clamp(2.2rem, 5vw, 4.4rem);
+	}
+
+	.rich-content h3 {
+		font-size: clamp(1.8rem, 3.5vw, 3rem);
+	}
+
+	.muted {
+		@apply m-0 text-ink-light;
+	}
+}
+
+@media (max-width: 760px) {
+	.desk-grid {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.desk-post {
+		height: 22rem;
+		transform: translate(calc(var(--desk-x) * 0.25), calc(var(--desk-y) * 0.35)) rotate(calc(var(--desk-r) * 0.45));
 	}
 }

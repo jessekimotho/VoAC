@@ -9,7 +9,6 @@ export type BlogPost = {
 	status: PostStatus;
 	post_type: 'post' | 'page';
 	featured: boolean;
-	hero_image_url: string | null;
 	published_at: string | null;
 	author_name: string | null;
 	category_name: string | null;

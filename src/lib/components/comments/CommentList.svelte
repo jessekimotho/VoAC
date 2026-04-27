@@ -3,13 +3,18 @@
 	import CommentList from './CommentList.svelte';
 
 	let { comments }: { comments: CommentNode[] } = $props();
+
+	function getRandomRotation() {
+		const rotations = [-1.5, -1, -0.5, 0.5, 1, 1.5];
+		return rotations[Math.floor(Math.random() * rotations.length)];
+	}
 </script>
 
 {#if comments.length}
 	<ol class="comments">
 		{#each comments as comment}
 			<li>
-				<article>
+				<article style="--rotation: {getRandomRotation()}deg;">
 					<header>
 						<strong>{comment.author_name}</strong>
 						<span>{new Intl.DateTimeFormat('en', { dateStyle: 'medium' }).format(new Date(comment.created_at))}</span>
@@ -39,10 +44,12 @@
 	}
 
 	article {
-		background: rgba(255, 255, 255, 0.55);
-		border: 1px solid rgba(44, 42, 38, 0.12);
-		border-radius: 8px;
-		padding: 1rem;
+		background: #fff9c4;
+		border: none;
+		border-radius: 4px;
+		padding: 1.25rem;
+		box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+		transform: rotate(var(--rotation, 0deg));
 	}
 
 	header {
