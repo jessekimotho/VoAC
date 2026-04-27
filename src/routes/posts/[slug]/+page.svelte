@@ -1,8 +1,6 @@
 <script lang="ts">
 	import CommentList from '$lib/components/comments/CommentList.svelte';
 	import PostEditorForm from '$lib/components/editor/PostEditorForm.svelte';
-	import gsap from 'gsap';
-	import { onMount } from 'svelte';
 
 	let { data, form }: { data: any, form?: any } = $props();
 	let isEditing = $state(false);
@@ -13,24 +11,6 @@
 			? new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(new Date(data.post.published_at))
 			: 'Undated'
 	);
-
-	onMount(() => {
-		if (!articleRef) return;
-		const root = articleRef;
-		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		if (reduceMotion) return;
-
-		const ctx = gsap.context(() => {
-			const els = root.querySelectorAll('.post-animate');
-			gsap.fromTo(
-				els,
-				{ opacity: 0, y: 28, rotate: -0.45 },
-				{ opacity: 1, y: 0, rotate: 0, duration: 0.85, stagger: 0.1, ease: 'power3.out' }
-			);
-		}, root);
-
-		return () => ctx.revert();
-	});
 </script>
 
 <svelte:head>
@@ -48,7 +28,7 @@
 		</div>
 	{:else}
 		<article bind:this={articleRef} class="paper-sheet shell min-w-0 px-[clamp(1.1rem,4vw,4rem)] py-[clamp(1.4rem,5vw,4.5rem)]">
-			<header class="post-animate relative mb-10 opacity-0">
+			<header class="relative mb-10">
 				<div class="mb-8 flex items-center justify-between gap-3">
 					<a href="/" class="eyebrow hover:text-ink-dark transition-colors">&lt;- Home</a>
 					{#if data.authenticated}
@@ -56,10 +36,10 @@
 					{/if}
 				</div>
 				<div class="grid gap-7 lg:grid-cols-[minmax(0,1fr)_12rem] lg:items-end">
-					<h1 class="post-animate m-0 max-w-[12ch] font-handwritten text-[clamp(3.3rem,10vw,8.5rem)] leading-[0.78] text-ink-dark opacity-0">
+					<h1 class="m-0 max-w-[12ch] font-handwritten text-[clamp(3.3rem,10vw,8.5rem)] leading-[0.78] text-ink-dark">
 						{data.post.title}
 					</h1>
-					<aside class="post-animate grid gap-2 border-t border-ink-dark/20 pt-4 font-serif text-sm text-ink-mid opacity-0 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
+					<aside class="grid gap-2 border-t border-ink-dark/20 pt-4 font-serif text-sm text-ink-mid lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
 						<span class="text-xs font-bold uppercase tracking-[0.22em] text-accent-blue">Archive note</span>
 						<span>{data.post.author_name ?? 'VoAC'}</span>
 						<span>{date}</span>
@@ -67,7 +47,7 @@
 				</div>
 			</header>
 
-			<div class="post-animate rich-content mx-auto max-w-[760px] opacity-0">
+			<div class="rich-content mx-auto max-w-[760px]">
 				{@html data.post.content_html}
 			</div>
 		</article>
