@@ -10,14 +10,5 @@
 		<a href="/" class="font-handwritten text-xl leading-none text-paper transition-colors hover:text-note-1" aria-label="Voice of an African Child home">
 			Voice of an African Child
 		</a>
-
-		<nav aria-label="Main navigation" class="absolute right-0 flex items-center gap-4 font-serif text-sm font-semibold text-paper/75">
-			{#if data?.authenticated}
-				<a href="/posts/new" class="hover:text-paper transition-colors">New post</a>
-				<form method="POST" action="/api/auth/logout">
-					<button type="submit" class="hover:text-paper transition-colors cursor-pointer">Sign out</button>
-				</form>
-			{/if}
-		</nav>
 	</div>
 </header>

@@ -17,7 +17,14 @@
 		<div class="shell flex justify-between gap-4 text-sm text-paper/72 max-sm:grid max-sm:justify-start">
 			<p class="m-0 font-handwritten text-xl leading-none text-paper">Voice of an African Child</p>
 			<p class="m-0">An archive laid out across a desk, made for slow reading.</p>
-			{#if !data?.authenticated}
+			{#if data?.authenticated}
+				<div class="flex items-center gap-4 font-serif text-sm font-semibold text-paper/75">
+					<a href="/posts/new" class="hover:text-paper transition-colors">New post</a>
+					<form method="POST" action="/api/auth/logout">
+						<button type="submit" class="hover:text-paper transition-colors cursor-pointer">Sign out</button>
+					</form>
+				</div>
+			{:else}
 				<div class="group relative">
 					<button
 						onclick={() => showLoginModal = true}
