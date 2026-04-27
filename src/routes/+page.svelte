@@ -1,58 +1,49 @@
 <script lang="ts">
 	import PostCard from '$lib/components/site/PostCard.svelte';
-	// import gsap from 'gsap';
-	// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-	// import { onMount } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { onMount } from 'svelte';
 
 	let { data } = $props();
 
+	let heroRef: HTMLElement | undefined = $state();
 	let cardsRef: HTMLElement | undefined = $state();
 	let cardLayouts = $state<Array<{ x: number; y: number; r: number }>>([]);
 
-	// Temporarily disable GSAP to test
-	// onMount(() => {
-	// 	gsap.registerPlugin(ScrollTrigger);
-	// 	cardLayouts = data.allPosts.map(() => ({
-	// 		x: (Math.random() - 0.5) * 1.6,
-	// 		y: (Math.random() - 0.5) * 0.9,
-	// 		r: (Math.random() - 0.5) * 4.6
-	// 	}));
-
-	// 	const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-	// 	if (reduceMotion) return;
-
-	// 	const ctx = gsap.context(() => {
-	// 		const heroEls = gsap.utils.toArray<HTMLElement>('.hero-animate');
-
-	// 		gsap.fromTo(
-	// 			heroEls,
-	// 			{ opacity: 0, y: 28, rotate: -1.2, transformOrigin: '50% 100%' },
-	// 			{ opacity: 1, y: 0, rotate: 0, duration: 1.05, stagger: 0.11, ease: 'power3.out' }
-	// 		);
-
-	// 		gsap.to('.hero-paper', {
-	// 			yPercent: -2,
-	// 			rotate: 0.35,
-	// 			ease: 'none',
-	// 			scrollTrigger: {
-	// 				trigger: heroRef,
-	// 				start: 'top top',
-	// 				end: 'bottom top',
-	// 				scrub: true
-	// 			}
-	// 		});
-	// 	});
-
-	// 	return () => ctx.revert();
-	// });
-
-	// Generate card layouts without GSAP
-	$effect(() => {
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		cardLayouts = data.allPosts.map(() => ({
 			x: (Math.random() - 0.5) * 1.6,
 			y: (Math.random() - 0.5) * 0.9,
 			r: (Math.random() - 0.5) * 4.6
 		}));
+
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (reduceMotion) return;
+
+		const ctx = gsap.context(() => {
+			const heroEls = gsap.utils.toArray<HTMLElement>('.hero-animate');
+
+			gsap.fromTo(
+				heroEls,
+				{ opacity: 0, y: 28, rotate: -1.2, transformOrigin: '50% 100%' },
+				{ opacity: 1, y: 0, rotate: 0, duration: 1.05, stagger: 0.11, ease: 'power3.out' }
+			);
+
+			gsap.to('.hero-paper', {
+				yPercent: -2,
+				rotate: 0.35,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: heroRef,
+					start: 'top top',
+					end: 'bottom top',
+					scrub: true
+				}
+			});
+		});
+
+		return () => ctx.revert();
 	});
 </script>
 
