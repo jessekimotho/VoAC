@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+__pycache__/
+.svelte-kit/
+build/
+.vercel/
+.env
+.env.*
+!.env.example
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+migration_export/media/
+*.psd

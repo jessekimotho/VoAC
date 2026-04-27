@@ -1,0 +1,1087 @@
+[
+  {
+    "source": "voiceofanafricanchild.wordpress.2019-03-11.001.xml",
+    "title": "Contact",
+    "link": "https://voiceofanafricanchild.wordpress.com/contact/",
+    "guid": "https://voiceofanafricanchild.wordpress.com/?page_id=3",
+    "creator": "voiceofanafricanchild",
+    "post_id": "3",
+    "post_date": "2017-01-29 17:04:59",
+    "post_date_gmt": "2017-01-29 17:04:59",
+    "slug": "contact",
+    "wordpress_slug": "contact",
+    "status": "publish",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 2,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "This is just a short excerpt for the contact&nbsp;page.",
+    "postmeta": {
+      "sharing_disabled": [
+        "a:1:{i:0;i:1;}"
+      ],
+      "switch_like_status": [
+        "a:1:{i:0;i:1;}"
+      ],
+      "_publicize_pending": [
+        "1"
+      ],
+      "_g_feedback_shortcode": [
+        "[contact-field label=\"Name\" type=\"name\" required=\"1\" /][contact-field label=\"Email\" type=\"email\" /][contact-field label=\"Website\" type=\"url\" /][contact-field label=\"Comment\" type=\"textarea\" required=\"1\" /]"
+      ],
+      "_g_feedback_shortcode_df2147732220171511661823b473ba8e2236da6d": [
+        "[contact-field label=\"Name\" type=\"name\" required=\"1\" /][contact-field label=\"Email\" type=\"email\" /][contact-field label=\"Website\" type=\"url\" /][contact-field label=\"Comment\" type=\"textarea\" required=\"1\" /]"
+      ],
+      "_g_feedback_shortcode_atts_df2147732220171511661823b473ba8e2236da6d": [
+        "a:6:{s:2:\"to\";s:24:\"Richardokenye4@gmail.com\";s:7:\"subject\";s:36:\"[Voice of an African Child.] Contact\";s:12:\"show_subject\";s:2:\"no\";s:6:\"widget\";i:0;s:2:\"id\";i:3;s:18:\"submit_button_text\";s:6:\"Submit\";}"
+      ]
+    },
+    "comments": [],
+    "content": "This is a contact page with some basic contact information and a contact form.\n\n[contact-form][contact-field label=\"Name\" type=\"name\" required=\"1\" /][contact-field label=\"Email\" type=\"email\" /][contact-field label=\"Website\" type=\"url\" /][contact-field label=\"Comment\" type=\"textarea\" required=\"1\" /][/contact-form]"
+  },
+  {
+    "source": "voiceofanafricanchild.wordpress.2019-03-11.001.xml",
+    "title": "About",
+    "link": "https://voiceofanafricanchild.wordpress.com/about/",
+    "guid": "https://voiceofanafricanchild.wordpress.com/?page_id=2",
+    "creator": "voiceofanafricanchild",
+    "post_id": "2",
+    "post_date": "2017-01-29 17:05:00",
+    "post_date_gmt": "2017-01-29 17:05:00",
+    "slug": "about",
+    "wordpress_slug": "about",
+    "status": "publish",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 1,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "This is just a short excerpt for the about&nbsp;page.",
+    "postmeta": {
+      "sharing_disabled": [
+        "a:1:{i:0;i:1;}"
+      ],
+      "switch_like_status": [
+        "a:1:{i:0;i:1;}"
+      ],
+      "_publicize_pending": [
+        "1"
+      ]
+    },
+    "comments": [],
+    "content": "I may not be loud enough for the African Child but I have a voice I want to use. Stories are created and buried in Africa"
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "Voice of An African Child - stories unbound.",
+    "link": "https://voiceofanafricanchild.com/",
+    "guid": "http://themenectar.com/demo/salient-blog-dark/?page_id=5765",
+    "creator": "Richard",
+    "post_id": "6411",
+    "post_date": "2017-09-03 03:55:21",
+    "post_date_gmt": "2017-09-03 03:55:21",
+    "slug": "blog-dark-landing-2",
+    "wordpress_slug": "blog-dark-landing-2",
+    "status": "publish",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_wpb_shortcodes_custom_css": [
+        ".vc_custom_1551945365221{margin-bottom: 60px !important;}.vc_custom_1551111498960{margin-top: 10px !important;margin-bottom: 10px !important;}"
+      ],
+      "_wp_page_template": [
+        "default"
+      ],
+      "nectar-metabox-portfolio-display": [
+        "a:1:{i:0;s:3:\"all\";}"
+      ],
+      "nectar-metabox-portfolio-display-sortable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_animation_speed": [
+        "medium"
+      ],
+      "_nectar_full_screen_rows_overall_bg_color": [
+        ""
+      ],
+      "_nectar_full_screen_rows_anchors": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_mobile_disable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_row_bg_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_dot_navigation": [
+        "tooltip"
+      ],
+      "_nectar_full_screen_rows_content_overflow": [
+        "scrollbar"
+      ],
+      "_nectar_full_screen_rows_footer": [
+        "none"
+      ],
+      "_nectar_slider_bg_type": [
+        "image_bg"
+      ],
+      "_nectar_canvas_shapes": [
+        ""
+      ],
+      "_nectar_media_upload_webm": [
+        ""
+      ],
+      "_nectar_media_upload_mp4": [
+        ""
+      ],
+      "_nectar_media_upload_ogv": [
+        ""
+      ],
+      "_nectar_slider_preview_image": [
+        ""
+      ],
+      "_nectar_header_bg": [
+        ""
+      ],
+      "_nectar_header_parallax": [
+        "off"
+      ],
+      "_nectar_header_box_roll": [
+        "off"
+      ],
+      "_nectar_header_bg_height": [
+        ""
+      ],
+      "_nectar_header_fullscreen": [
+        "off"
+      ],
+      "_nectar_header_title": [
+        ""
+      ],
+      "_nectar_header_subtitle": [
+        ""
+      ],
+      "_nectar_page_header_text-effect": [
+        "none"
+      ],
+      "_nectar_particle_rotation_timing": [
+        ""
+      ],
+      "_nectar_particle_disable_explosion": [
+        "off"
+      ],
+      "_nectar_page_header_alignment": [
+        "left"
+      ],
+      "_nectar_page_header_alignment_v": [
+        "middle"
+      ],
+      "_nectar_page_header_bg_alignment": [
+        "center"
+      ],
+      "_nectar_header_bg_color": [
+        ""
+      ],
+      "_nectar_header_font_color": [
+        ""
+      ],
+      "_nectar_header_bg_overlay_color": [
+        ""
+      ],
+      "_wpb_vc_js_status": [
+        "true"
+      ],
+      "_disable_transparent_header": [
+        "off"
+      ],
+      "_force_transparent_header": [
+        "on"
+      ],
+      "_edit_last": [
+        "1"
+      ],
+      "_force_transparent_header_color": [
+        "light"
+      ]
+    },
+    "comments": [],
+    "content": "[vc_row type=\"full_width_content\" full_screen_row_position=\"middle\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" bg_image_animation=\"none\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][recent_posts style=\"multiple_large_featured\" category=\"all\" multiple_large_featured_num=\"4\" auto_rotate=\"8000\" large_featured_padding=\"20%\" mlf_navigation_location=\"side\" button_color=\"extra-color-gradient-2\" bg_overlay=\"solid_color\" order=\"DESC\" orderby=\"date\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" bg_image_animation=\"none\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" top_margin=\"-5%\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][nectar_blog layout=\"masonry-blog-fullwidth\" blog_masonry_style=\"auto_meta_overlaid_spaced\" auto_masonry_spacing=\"4px\" category=\"all\" load_in_animation=\"none\" order=\"DESC\" orderby=\"date\" posts_per_page=\"6\" post_offset=\"1\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" equal_height=\"yes\" content_placement=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"60\" bottom_padding=\"60\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" bg_image_animation=\"none\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"center\" phone_text_alignment=\"center\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][nectar_cta btn_style=\"see-through\" heading_tag=\"h5\" link_type=\"regular\" alignment=\"center\" link_text=\"View All Posts\" url=\"https://voiceofanafricanchild.com/allposts/\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"4%\" bottom_padding=\"3%\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" bg_image_animation=\"none\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][vc_column_text css=\".vc_custom_1551945365221{margin-bottom: 60px !important;}\"]\n<h2 style=\"text-align: center;\">Book Reviews</h2>\n[/vc_column_text][recent_posts style=\"list_featured_first_row\" category=\"book-review\" columns=\"2\" order=\"DESC\" orderby=\"date\" posts_per_page=\"2\" post_offset=\"0\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" equal_height=\"yes\" content_placement=\"middle\" bg_image=\"6422\" bg_position=\"center bottom\" bg_repeat=\"no-repeat\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"15%\" bottom_padding=\"15%\" enable_gradient=\"true\" color_overlay=\"#0a0a0a\" color_overlay_2=\"rgba(17,17,17,0.31)\" gradient_direction=\"top_to_bottom\" overlay_strength=\"1\" shape_divider_position=\"bottom\" bg_image_animation=\"none\" parallax_bg=\"true\" parallax_bg_speed=\"fast\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][vc_row_inner column_margin=\"default\" text_align=\"left\"][vc_column_inner column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" column_link_target=\"_self\" width=\"1/6\" tablet_width_inherit=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][/vc_column_inner][vc_column_inner column_padding=\"padding-2-percent\" column_padding_position=\"left-right\" centered_text=\"true\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" column_link_target=\"_self\" width=\"2/3\" tablet_width_inherit=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][vc_custom_heading text=\"Nairobi Half Life and other stories\" font_container=\"tag:h2|font_size:52|text_align:center|line_height:52px\" use_theme_fonts=\"yes\" css_animation=\"fadeInUp\"][divider line_type=\"No Line\" custom_height=\"10\"][vc_custom_heading text=\"Welcome to Nairobi - the city in the sun. Get started with your journey in the big city with stories from the underbellies of Nairobi. Like nothing you've read before\" font_container=\"tag:p|text_align:center|color:rgba(255%2C255%2C255%2C0.7)\" use_theme_fonts=\"yes\" css_animation=\"fadeInUp\" css=\".vc_custom_1551111498960{margin-top: 10px !important;margin-bottom: 10px !important;}\"][nectar_btn size=\"jumbo\" button_style=\"regular\" button_color_2=\"extra-color-gradient-2\" icon_family=\"default_arrow\" url=\"https://voiceofanafricanchild.com/category/the-city/\" text=\"Get Reading\" css_animation=\"zoomIn\"][/vc_column_inner][vc_column_inner column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" column_link_target=\"_self\" width=\"1/6\" tablet_width_inherit=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]"
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "tt",
+    "link": "https://voiceofanafricanchild.com/blog-dark-landing__trashed/",
+    "guid": "http://themenectar.com/demo/salient-blog-dark/?page_id=5765",
+    "creator": "Richard",
+    "post_id": "6327",
+    "post_date": "2017-09-03 03:55:21",
+    "post_date_gmt": "2017-09-03 03:55:21",
+    "slug": "blog-dark-landing-trashed",
+    "wordpress_slug": "blog-dark-landing__trashed",
+    "status": "trash",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_wp_desired_post_slug": [
+        "blog-dark-landing"
+      ],
+      "_wpb_shortcodes_custom_css": [
+        ".vc_custom_1551110982424{margin-bottom: 60px !important;}.vc_custom_1551111498960{margin-top: 10px !important;margin-bottom: 10px !important;}"
+      ],
+      "_wp_page_template": [
+        "template-no-header.php"
+      ],
+      "nectar-metabox-portfolio-display": [
+        "a:1:{i:0;s:3:\"all\";}"
+      ],
+      "nectar-metabox-portfolio-display-sortable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_animation_speed": [
+        "medium"
+      ],
+      "_nectar_full_screen_rows_overall_bg_color": [
+        ""
+      ],
+      "_nectar_full_screen_rows_anchors": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_mobile_disable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_row_bg_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_dot_navigation": [
+        "tooltip"
+      ],
+      "_nectar_full_screen_rows_content_overflow": [
+        "scrollbar"
+      ],
+      "_nectar_full_screen_rows_footer": [
+        "none"
+      ],
+      "_nectar_slider_bg_type": [
+        "image_bg"
+      ],
+      "_nectar_canvas_shapes": [
+        ""
+      ],
+      "_nectar_media_upload_webm": [
+        ""
+      ],
+      "_nectar_media_upload_mp4": [
+        ""
+      ],
+      "_nectar_media_upload_ogv": [
+        ""
+      ],
+      "_nectar_slider_preview_image": [
+        ""
+      ],
+      "_nectar_header_bg": [
+        ""
+      ],
+      "_nectar_header_parallax": [
+        "off"
+      ],
+      "_nectar_header_box_roll": [
+        "off"
+      ],
+      "_nectar_header_bg_height": [
+        "0"
+      ],
+      "_nectar_header_fullscreen": [
+        "off"
+      ],
+      "_nectar_header_title": [
+        ""
+      ],
+      "_nectar_header_subtitle": [
+        ""
+      ],
+      "_nectar_page_header_text-effect": [
+        "none"
+      ],
+      "_nectar_particle_rotation_timing": [
+        ""
+      ],
+      "_nectar_particle_disable_explosion": [
+        "off"
+      ],
+      "_nectar_page_header_alignment": [
+        "left"
+      ],
+      "_nectar_page_header_alignment_v": [
+        "middle"
+      ],
+      "_nectar_page_header_bg_alignment": [
+        "center"
+      ],
+      "_nectar_header_bg_color": [
+        "#0a0a0a"
+      ],
+      "_nectar_header_font_color": [
+        ""
+      ],
+      "_nectar_header_bg_overlay_color": [
+        ""
+      ],
+      "_wpb_vc_js_status": [
+        "true"
+      ],
+      "_disable_transparent_header": [
+        "off"
+      ],
+      "_force_transparent_header": [
+        "on"
+      ],
+      "_edit_last": [
+        "1"
+      ],
+      "_force_transparent_header_color": [
+        "dark"
+      ],
+      "_wp_trash_meta_time": [
+        "1551943722"
+      ],
+      "_wp_trash_meta_status": [
+        "publish"
+      ]
+    },
+    "comments": [],
+    "content": "[vc_row type=\"full_width_content\" full_screen_row_position=\"middle\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][recent_posts style=\"single_large_featured\" category=\"all\" large_featured_padding=\"12%\" button_color=\"extra-color-gradient-2\" bg_overlay=\"diagonal_gradient\" order=\"DESC\" orderby=\"date\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" top_margin=\"-5%\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][nectar_blog layout=\"masonry-blog-fullwidth\" blog_masonry_style=\"auto_meta_overlaid_spaced\" auto_masonry_spacing=\"4px\" category=\"all\" load_in_animation=\"none\" order=\"DESC\" orderby=\"date\" posts_per_page=\"6\" post_offset=\"1\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" equal_height=\"yes\" content_placement=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"60\" bottom_padding=\"60\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"center\" phone_text_alignment=\"center\" column_border_width=\"none\" column_border_style=\"solid\"][nectar_cta btn_style=\"see-through\" heading_tag=\"h5\" link_type=\"regular\" alignment=\"center\" link_text=\"View All Posts\" url=\"#\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"4%\" bottom_padding=\"3%\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][vc_column_text css=\".vc_custom_1551110982424{margin-bottom: 60px !important;}\"]\n<h2 style=\"text-align: center;\">Book Reviews</h2>\n[/vc_column_text][recent_posts style=\"list_featured_first_row\" category=\"book-review\" columns=\"2\" order=\"DESC\" orderby=\"date\" posts_per_page=\"2\" post_offset=\"0\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" equal_height=\"yes\" content_placement=\"middle\" bg_image=\"6364\" bg_position=\"center bottom\" bg_repeat=\"no-repeat\" parallax_bg=\"true\" parallax_bg_speed=\"fast\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"15%\" bottom_padding=\"15%\" enable_gradient=\"true\" color_overlay=\"#0a0a0a\" color_overlay_2=\"rgba(17,17,17,0.31)\" gradient_direction=\"top_to_bottom\" overlay_strength=\"1\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][vc_row_inner column_margin=\"default\" text_align=\"left\"][vc_column_inner column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" column_link_target=\"_self\" width=\"1/6\" tablet_width_inherit=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][/vc_column_inner][vc_column_inner column_padding=\"padding-2-percent\" column_padding_position=\"left-right\" centered_text=\"true\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" column_link_target=\"_self\" width=\"2/3\" tablet_width_inherit=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][vc_custom_heading text=\"Nairobi Half Life and other stories\" font_container=\"tag:h2|font_size:52|text_align:center|line_height:52px\" use_theme_fonts=\"yes\" css_animation=\"fadeInUp\"][divider line_type=\"No Line\" custom_height=\"10\"][vc_custom_heading text=\"Welcome to Nairobi - the city in the sun. Get started with your journey in the big city with stories from the underbellies of Nairobi. Like nothing you've read before\" font_container=\"tag:p|text_align:center|color:rgba(255%2C255%2C255%2C0.7)\" use_theme_fonts=\"yes\" css_animation=\"fadeInUp\" css=\".vc_custom_1551111498960{margin-top: 10px !important;margin-bottom: 10px !important;}\"][nectar_btn size=\"jumbo\" button_style=\"regular\" button_color_2=\"extra-color-gradient-2\" icon_family=\"default_arrow\" url=\"https://voiceofanafricanchild.com/category/the-city/\" text=\"Get Reading\" css_animation=\"zoomIn\"][/vc_column_inner][vc_column_inner column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" column_link_target=\"_self\" width=\"1/6\" tablet_width_inherit=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]"
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "Voice of an African Child",
+    "link": "https://voiceofanafricanchild.com/voice-african-child__trashed/",
+    "guid": "http://themenectar.com/demo/salient-blog-dark/?page_id=5765",
+    "creator": "Richard",
+    "post_id": "5765",
+    "post_date": "2017-09-03 03:55:21",
+    "post_date_gmt": "2017-09-03 03:55:21",
+    "slug": "voice-african-child-trashed",
+    "wordpress_slug": "voice-african-child__trashed",
+    "status": "trash",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_vc_post_settings": [
+        "a:1:{s:10:\"vc_grid_id\";a:0:{}}"
+      ],
+      "_wpb_shortcodes_custom_css": [
+        ".vc_custom_1517240668296{margin-bottom: 60px !important;}.vc_custom_1517240143293{margin-top: 10px !important;margin-bottom: 10px !important;}"
+      ],
+      "_wp_page_template": [
+        "default"
+      ],
+      "nectar-metabox-portfolio-display": [
+        "a:1:{i:0;s:3:\"all\";}"
+      ],
+      "nectar-metabox-portfolio-display-sortable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_animation_speed": [
+        "medium"
+      ],
+      "_nectar_full_screen_rows_overall_bg_color": [
+        ""
+      ],
+      "_nectar_full_screen_rows_anchors": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_mobile_disable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_row_bg_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_dot_navigation": [
+        "tooltip"
+      ],
+      "_nectar_full_screen_rows_content_overflow": [
+        "scrollbar"
+      ],
+      "_nectar_full_screen_rows_footer": [
+        "none"
+      ],
+      "_nectar_slider_bg_type": [
+        "image_bg"
+      ],
+      "_nectar_canvas_shapes": [
+        ""
+      ],
+      "_nectar_media_upload_webm": [
+        ""
+      ],
+      "_nectar_media_upload_mp4": [
+        ""
+      ],
+      "_nectar_media_upload_ogv": [
+        ""
+      ],
+      "_nectar_slider_preview_image": [
+        ""
+      ],
+      "_nectar_header_bg": [
+        ""
+      ],
+      "_nectar_header_parallax": [
+        "off"
+      ],
+      "_nectar_header_box_roll": [
+        "off"
+      ],
+      "_nectar_header_bg_height": [
+        ""
+      ],
+      "_nectar_header_fullscreen": [
+        "off"
+      ],
+      "_nectar_header_title": [
+        ""
+      ],
+      "_nectar_header_subtitle": [
+        ""
+      ],
+      "_nectar_page_header_text-effect": [
+        "none"
+      ],
+      "_nectar_particle_rotation_timing": [
+        ""
+      ],
+      "_nectar_particle_disable_explosion": [
+        "off"
+      ],
+      "_nectar_page_header_alignment": [
+        "left"
+      ],
+      "_nectar_page_header_alignment_v": [
+        "middle"
+      ],
+      "_nectar_page_header_bg_alignment": [
+        "center"
+      ],
+      "_nectar_header_bg_color": [
+        ""
+      ],
+      "_nectar_header_font_color": [
+        ""
+      ],
+      "_nectar_header_bg_overlay_color": [
+        ""
+      ],
+      "_wpb_vc_js_status": [
+        "true"
+      ],
+      "_disable_transparent_header": [
+        "off"
+      ],
+      "_force_transparent_header": [
+        "on"
+      ],
+      "_edit_last": [
+        "2"
+      ],
+      "_at_widget": [
+        "1"
+      ],
+      "_yoast_wpseo_content_score": [
+        "90"
+      ],
+      "_yoast_wpseo_focuskw_text_input": [
+        "Voice of Africa"
+      ],
+      "_yoast_wpseo_focuskw": [
+        "Voice of Africa"
+      ],
+      "_yoast_wpseo_title": [
+        "Voice of an African Child: Stories Unbound"
+      ],
+      "_yoast_wpseo_metadesc": [
+        "Short stories written by African authors based on their life experiences, fantasies, dreams or whatever really. They represent the voices of others as well as their own - Fiction, non-fiction. Anything goes."
+      ],
+      "_yoast_wpseo_linkdex": [
+        "21"
+      ],
+      "_thumbnail_id": [
+        "6068"
+      ],
+      "_yoast_wpseo_is_cornerstone": [
+        "1"
+      ],
+      "sfly_guest_link": [
+        ""
+      ],
+      "sfly_guest_author_description": [
+        ""
+      ],
+      "sfly_guest_author_names": [
+        ""
+      ],
+      "sfly_guest_author_email": [
+        ""
+      ],
+      "_wp_trash_meta_status": [
+        "publish"
+      ],
+      "_wp_trash_meta_time": [
+        "1551105823"
+      ],
+      "_wp_desired_post_slug": [
+        "voice-african-child"
+      ]
+    },
+    "comments": [],
+    "content": "[vc_row type=\"full_width_content\" full_screen_row_position=\"middle\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][recent_posts style=\"single_large_featured\" category=\"all\" large_featured_padding=\"12%\" button_color=\"Accent-Color\" bg_overlay=\"diagonal_gradient\" order=\"DESC\" orderby=\"date\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" top_margin=\"-5%\" width=\"1/1\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][nectar_blog layout=\"masonry-blog-fullwidth\" blog_masonry_style=\"auto_meta_overlaid_spaced\" auto_masonry_spacing=\"4px\" category=\"forafrica-series,high-school,the-city,uncategorized,whack-poetry\" load_in_animation=\"none\" order=\"DESC\" orderby=\"date\" posts_per_page=\"6\" post_offset=\"1\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" equal_height=\"yes\" content_placement=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"60\" bottom_padding=\"60\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_text_alignment=\"center\" phone_text_alignment=\"center\" column_border_width=\"none\" column_border_style=\"solid\"][nectar_cta btn_style=\"see-through\" heading_tag=\"h5\" link_type=\"regular\" alignment=\"center\" link_text=\"View All Posts\" url=\"http://www.voiceofanafricanchild.com/posts\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"4%\" bottom_padding=\"3%\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][vc_column_text css=\".vc_custom_1517240668296{margin-bottom: 60px !important;}\"]\n<h2 style=\"text-align: center;\">Category Spotlight: Village Stories</h2>\n[/vc_column_text][recent_posts style=\"list_featured_first_row\" category=\"village-stories\" columns=\"2\" order=\"DESC\" orderby=\"date\" posts_per_page=\"2\" post_offset=\"0\"][/vc_column][/vc_row][vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" equal_height=\"yes\" content_placement=\"middle\" bg_image=\"5917\" bg_position=\"center bottom\" bg_repeat=\"no-repeat\" parallax_bg=\"true\" parallax_bg_speed=\"fast\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"light\" text_align=\"left\" top_padding=\"15%\" bottom_padding=\"15%\" enable_gradient=\"true\" color_overlay=\"#0a0a0a\" color_overlay_2=\"rgba(17,17,17,0.31)\" gradient_direction=\"top_to_bottom\" overlay_strength=\"1\" shape_divider_position=\"bottom\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\"][vc_row_inner column_margin=\"default\" text_align=\"left\"][vc_column_inner column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/6\" column_border_width=\"none\" column_border_style=\"solid\"][/vc_column_inner][vc_column_inner column_padding=\"padding-2-percent\" column_padding_position=\"left-right\" centered_text=\"true\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" width=\"2/3\" column_border_width=\"none\" column_border_style=\"solid\"][vc_custom_heading text=\"#THECITY Series\" font_container=\"tag:h2|font_size:52|text_align:center|line_height:52px\" use_theme_fonts=\"yes\" css_animation=\"fadeInUp\"][divider line_type=\"No Line\" custom_height=\"10\"][vc_custom_heading text=\"Stories for the children of Africa, from the children of Africa\" font_container=\"tag:p|text_align:center|color:rgba(255%2C255%2C255%2C0.7)\" use_theme_fonts=\"yes\" css_animation=\"fadeInUp\" css=\".vc_custom_1517240143293{margin-top: 10px !important;margin-bottom: 10px !important;}\"][nectar_btn size=\"jumbo\" button_style=\"regular\" button_color_2=\"extra-color-gradient-2\" icon_family=\"default_arrow\" url=\"http://www.voiceofanafricanchild.com/category/the-city/#.WnEZUa5l-po\" text=\"Read Now\" css_animation=\"zoomIn\"][/vc_column_inner][vc_column_inner column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/6\" column_border_width=\"none\" column_border_style=\"solid\"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]"
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "All Posts",
+    "link": "https://voiceofanafricanchild.com/allposts/",
+    "guid": "http://themenectar.com/demo/salient-blog-dark/?page_id=5835",
+    "creator": "Richard",
+    "post_id": "5835",
+    "post_date": "2017-10-02 15:30:11",
+    "post_date_gmt": "2017-10-02 15:30:11",
+    "slug": "allposts",
+    "wordpress_slug": "allposts",
+    "status": "publish",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_wp_page_template": [
+        "default"
+      ],
+      "nectar-metabox-portfolio-display": [
+        "a:1:{i:0;s:3:\"all\";}"
+      ],
+      "nectar-metabox-portfolio-display-sortable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_animation_speed": [
+        "medium"
+      ],
+      "_nectar_full_screen_rows_overall_bg_color": [
+        ""
+      ],
+      "_nectar_full_screen_rows_anchors": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_mobile_disable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_row_bg_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_dot_navigation": [
+        "tooltip"
+      ],
+      "_nectar_full_screen_rows_content_overflow": [
+        "scrollbar"
+      ],
+      "_nectar_full_screen_rows_footer": [
+        "none"
+      ],
+      "_nectar_slider_bg_type": [
+        "image_bg"
+      ],
+      "_nectar_canvas_shapes": [
+        ""
+      ],
+      "_nectar_media_upload_webm": [
+        ""
+      ],
+      "_nectar_media_upload_mp4": [
+        ""
+      ],
+      "_nectar_media_upload_ogv": [
+        ""
+      ],
+      "_nectar_slider_preview_image": [
+        ""
+      ],
+      "_nectar_header_bg": [
+        ""
+      ],
+      "_nectar_header_parallax": [
+        "off"
+      ],
+      "_nectar_header_box_roll": [
+        "off"
+      ],
+      "_nectar_header_bg_height": [
+        ""
+      ],
+      "_nectar_header_fullscreen": [
+        "off"
+      ],
+      "_nectar_header_title": [
+        ""
+      ],
+      "_nectar_header_subtitle": [
+        ""
+      ],
+      "_nectar_page_header_text-effect": [
+        "none"
+      ],
+      "_nectar_particle_rotation_timing": [
+        ""
+      ],
+      "_nectar_particle_disable_explosion": [
+        "off"
+      ],
+      "_nectar_page_header_alignment": [
+        "left"
+      ],
+      "_nectar_page_header_alignment_v": [
+        "middle"
+      ],
+      "_nectar_page_header_bg_alignment": [
+        "center"
+      ],
+      "_nectar_header_bg_color": [
+        ""
+      ],
+      "_nectar_header_font_color": [
+        ""
+      ],
+      "_nectar_header_bg_overlay_color": [
+        ""
+      ],
+      "_disable_transparent_header": [
+        "off"
+      ],
+      "_force_transparent_header": [
+        "off"
+      ],
+      "_wpb_vc_js_status": [
+        "true"
+      ],
+      "_force_transparent_header_color": [
+        "light"
+      ],
+      "_edit_last": [
+        "1"
+      ]
+    },
+    "comments": [],
+    "content": "[vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" bg_image_animation=\"none\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][nectar_blog layout=\"masonry-blog-full-screen-width\" blog_masonry_style=\"auto_meta_overlaid_spaced\" auto_masonry_spacing=\"4px\" category=\"all\" enable_pagination=\"true\" pagination_type=\"infinite_scroll\" load_in_animation=\"fade_in_from_bottom\" order=\"DESC\" orderby=\"date\" posts_per_page=\"12\"][/vc_column][/vc_row]"
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "Results",
+    "link": "https://voiceofanafricanchild.com/posts/",
+    "guid": "http://www.voiceofanafricanchild.com/?page_id=6008",
+    "creator": "Richard",
+    "post_id": "6008",
+    "post_date": "2018-01-31 19:16:11",
+    "post_date_gmt": "2018-01-31 16:16:11",
+    "slug": "posts",
+    "wordpress_slug": "posts",
+    "status": "publish",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_edit_last": [
+        "1"
+      ],
+      "_wp_page_template": [
+        "default"
+      ],
+      "nectar-metabox-portfolio-display": [
+        "a:1:{i:0;s:3:\"all\";}"
+      ],
+      "nectar-metabox-portfolio-display-sortable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_animation_speed": [
+        "medium"
+      ],
+      "_nectar_full_screen_rows_overall_bg_color": [
+        ""
+      ],
+      "_nectar_full_screen_rows_anchors": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_mobile_disable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_row_bg_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_dot_navigation": [
+        "tooltip"
+      ],
+      "_nectar_full_screen_rows_content_overflow": [
+        "scrollbar"
+      ],
+      "_nectar_full_screen_rows_footer": [
+        "none"
+      ],
+      "_nectar_slider_bg_type": [
+        "image_bg"
+      ],
+      "_nectar_canvas_shapes": [
+        ""
+      ],
+      "_nectar_media_upload_webm": [
+        ""
+      ],
+      "_nectar_media_upload_mp4": [
+        ""
+      ],
+      "_nectar_media_upload_ogv": [
+        ""
+      ],
+      "_nectar_slider_preview_image": [
+        ""
+      ],
+      "_nectar_header_bg": [
+        "http://www.voiceofanafricanchild.com/wp-content/uploads/2018/01/15.png"
+      ],
+      "_nectar_header_parallax": [
+        "off"
+      ],
+      "_nectar_header_box_roll": [
+        "off"
+      ],
+      "_nectar_header_bg_height": [
+        ""
+      ],
+      "_nectar_header_fullscreen": [
+        "off"
+      ],
+      "_nectar_header_title": [
+        ""
+      ],
+      "_nectar_header_subtitle": [
+        ""
+      ],
+      "_nectar_page_header_text-effect": [
+        "none"
+      ],
+      "_nectar_particle_rotation_timing": [
+        ""
+      ],
+      "_nectar_particle_disable_explosion": [
+        "off"
+      ],
+      "_nectar_page_header_alignment": [
+        "left"
+      ],
+      "_nectar_page_header_alignment_v": [
+        "middle"
+      ],
+      "_nectar_page_header_bg_alignment": [
+        "center"
+      ],
+      "_nectar_header_bg_color": [
+        ""
+      ],
+      "_nectar_header_font_color": [
+        ""
+      ],
+      "_nectar_header_bg_overlay_color": [
+        "#0a0a0a"
+      ],
+      "_disable_transparent_header": [
+        "off"
+      ],
+      "_force_transparent_header": [
+        "on"
+      ],
+      "_wpb_vc_js_status": [
+        "false"
+      ],
+      "_at_widget": [
+        "1"
+      ],
+      "_yoast_wpseo_content_score": [
+        "30"
+      ],
+      "_wt_css": [
+        ".ocm-effect-wrap .ocm-effect-wrap-inner{\n\tbackground-color:#000000;\n}"
+      ],
+      "_wt_styles": [
+        "/* [rule=background-color] [selector=yp-sym-uocmyp-sym-teffectyp-sym-twrapyp-sym-uocmyp-sym-teffectyp-sym-twrapyp-sym-tinner] [msize=desktop] */\n .ocm-effect-wrap .ocm-effect-wrap-inner{background-color:#000000}"
+      ],
+      "_force_transparent_header_color": [
+        "light"
+      ]
+    },
+    "comments": [],
+    "content": ""
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "Privacy Policy",
+    "link": "https://voiceofanafricanchild.com/privacy-policy__trashed/",
+    "guid": "https://voiceofanafricanchild.com/?page_id=3",
+    "creator": "Richard",
+    "post_id": "3",
+    "post_date": "2019-02-25 13:40:55",
+    "post_date_gmt": "2019-02-25 13:40:55",
+    "slug": "privacy-policy-trashed",
+    "wordpress_slug": "privacy-policy__trashed",
+    "status": "trash",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_wp_page_template": [
+        "default"
+      ],
+      "_wp_trash_meta_status": [
+        "draft"
+      ],
+      "_wp_trash_meta_time": [
+        "1551105823"
+      ],
+      "_wp_desired_post_slug": [
+        "privacy-policy"
+      ],
+      "_vc_post_settings": [
+        "a:1:{s:10:\"vc_grid_id\";a:0:{}}"
+      ]
+    },
+    "comments": [],
+    "content": "<!-- wp:heading --><h2>Who we are</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Our website address is: https://voiceofanafricanchild.com.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What personal data we collect and why we collect it</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Comments</h3><!-- /wp:heading --><!-- wp:paragraph --><p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Media</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Contact forms</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Cookies</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you have an account and you log in to this site, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Embedded content from other websites</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Analytics</h3><!-- /wp:heading --><!-- wp:heading --><h2>Who we share your data with</h2><!-- /wp:heading --><!-- wp:heading --><h2>How long we retain your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What rights you have over your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Where we send your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Visitor comments may be checked through an automated spam detection service.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Your contact information</h2><!-- /wp:heading --><!-- wp:heading --><h2>Additional information</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>How we protect your data</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What data breach procedures we have in place</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What third parties we receive data from</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What automated decision making and/or profiling we do with user data</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Industry regulatory disclosure requirements</h3><!-- /wp:heading -->"
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "Sample Page",
+    "link": "https://voiceofanafricanchild.com/sample-page__trashed/",
+    "guid": "https://voiceofanafricanchild.com/?page_id=2",
+    "creator": "Richard",
+    "post_id": "2",
+    "post_date": "2019-02-25 13:40:55",
+    "post_date_gmt": "2019-02-25 13:40:55",
+    "slug": "sample-page-trashed",
+    "wordpress_slug": "sample-page__trashed",
+    "status": "trash",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_wp_page_template": [
+        "default"
+      ],
+      "_wp_trash_meta_status": [
+        "publish"
+      ],
+      "_wp_trash_meta_time": [
+        "1551105823"
+      ],
+      "_wp_desired_post_slug": [
+        "sample-page"
+      ],
+      "_vc_post_settings": [
+        "a:1:{s:10:\"vc_grid_id\";a:0:{}}"
+      ]
+    },
+    "comments": [],
+    "content": "<!-- wp:paragraph -->\n<p>This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href=\"https://voiceofanafricanchild.com/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+    "source": "voiceofanafricanchild.WordPress.2019-03-12.xml",
+    "title": "All Posts",
+    "link": "https://voiceofanafricanchild.com/all-posts/",
+    "guid": "https://voiceofanafricanchild.com/?page_id=6455",
+    "creator": "Richard",
+    "post_id": "6455",
+    "post_date": "2019-03-11 09:29:37",
+    "post_date_gmt": "2019-03-11 09:29:37",
+    "slug": "all-posts",
+    "wordpress_slug": "all-posts",
+    "status": "publish",
+    "post_type": "page",
+    "parent": "0",
+    "menu_order": 0,
+    "attachment_url": "",
+    "categories": [],
+    "excerpt": "",
+    "postmeta": {
+      "_edit_last": [
+        "1"
+      ],
+      "_wp_page_template": [
+        "default"
+      ],
+      "nectar-metabox-portfolio-display": [
+        "a:1:{i:0;s:3:\"all\";}"
+      ],
+      "nectar-metabox-portfolio-display-sortable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_animation_speed": [
+        "medium"
+      ],
+      "_nectar_full_screen_rows_overall_bg_color": [
+        ""
+      ],
+      "_nectar_full_screen_rows_anchors": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_mobile_disable": [
+        "off"
+      ],
+      "_nectar_full_screen_rows_row_bg_animation": [
+        "none"
+      ],
+      "_nectar_full_screen_rows_dot_navigation": [
+        "tooltip"
+      ],
+      "_nectar_full_screen_rows_content_overflow": [
+        "scrollbar"
+      ],
+      "_nectar_full_screen_rows_footer": [
+        "none"
+      ],
+      "_nectar_slider_bg_type": [
+        "image_bg"
+      ],
+      "_nectar_canvas_shapes": [
+        ""
+      ],
+      "_nectar_media_upload_webm": [
+        ""
+      ],
+      "_nectar_media_upload_mp4": [
+        ""
+      ],
+      "_nectar_media_upload_ogv": [
+        ""
+      ],
+      "_nectar_slider_preview_image": [
+        ""
+      ],
+      "_nectar_header_bg": [
+        ""
+      ],
+      "_nectar_header_parallax": [
+        "off"
+      ],
+      "_nectar_header_box_roll": [
+        "off"
+      ],
+      "_nectar_header_bg_height": [
+        ""
+      ],
+      "_nectar_header_fullscreen": [
+        "off"
+      ],
+      "_nectar_header_title": [
+        ""
+      ],
+      "_nectar_header_subtitle": [
+        ""
+      ],
+      "_nectar_page_header_text-effect": [
+        "none"
+      ],
+      "_nectar_particle_rotation_timing": [
+        ""
+      ],
+      "_nectar_particle_disable_explosion": [
+        "off"
+      ],
+      "_nectar_page_header_alignment": [
+        "left"
+      ],
+      "_nectar_page_header_alignment_v": [
+        "middle"
+      ],
+      "_nectar_page_header_bg_alignment": [
+        "center"
+      ],
+      "_nectar_header_bg_color": [
+        ""
+      ],
+      "_nectar_header_font_color": [
+        ""
+      ],
+      "_nectar_header_bg_overlay_color": [
+        ""
+      ],
+      "_disable_transparent_header": [
+        "off"
+      ],
+      "_force_transparent_header": [
+        "off"
+      ],
+      "_force_transparent_header_color": [
+        "light"
+      ],
+      "_wpb_vc_js_status": [
+        "true"
+      ]
+    },
+    "comments": [],
+    "content": "[vc_row type=\"full_width_background\" full_screen_row_position=\"middle\" bg_color=\"#0a0a0a\" scene_position=\"center\" text_color=\"dark\" text_align=\"left\" overlay_strength=\"0.3\" shape_divider_position=\"bottom\" bg_image_animation=\"none\" shape_type=\"\"][vc_column column_padding=\"no-extra-padding\" column_padding_position=\"all\" background_color_opacity=\"1\" background_hover_color_opacity=\"1\" column_link_target=\"_self\" column_shadow=\"none\" column_border_radius=\"none\" width=\"1/1\" tablet_width_inherit=\"default\" tablet_text_alignment=\"default\" phone_text_alignment=\"default\" column_border_width=\"none\" column_border_style=\"solid\" bg_image_animation=\"none\"][nectar_blog layout=\"masonry-blog-full-screen-width\" blog_masonry_style=\"auto_meta_overlaid_spaced\" auto_masonry_spacing=\"4px\" category=\"all\" enable_pagination=\"true\" pagination_type=\"default\" load_in_animation=\"fade_in_from_bottom\" order=\"DESC\" orderby=\"date\" posts_per_page=\"19\"][/vc_column][/vc_row]"
+  }
+]
