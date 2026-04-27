@@ -10,6 +10,8 @@
 	let cardsRef: HTMLElement | undefined = $state();
 	let cardLayouts = $state<Array<{ x: number; y: number; r: number }>>([]);
 
+
+	//richie
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		cardLayouts = data.allPosts.map(() => ({
