@@ -13,6 +13,38 @@
 	);
 </script>
 
+<style>
+	.comment-form-card {
+		background-image:
+			linear-gradient(rgba(36, 95, 115, 0.1) 1px, transparent 1px),
+			linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0));
+		background-size: 100% 29px, 100% 100%;
+	}
+
+	.comment-form-card::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background:
+			linear-gradient(90deg, transparent 3.2rem, rgba(214, 90, 74, 0.28) 3.25rem, transparent 3.32rem),
+			radial-gradient(circle at 20% 8%, rgba(255, 255, 255, 0.72), transparent 24%);
+		mix-blend-mode: multiply;
+	}
+
+	.comment-form-card .tape-mark {
+		position: absolute;
+		left: 50%;
+		top: -0.55rem;
+		z-index: 1;
+		width: 5.5rem;
+		height: 1.25rem;
+		transform: translateX(-50%) rotate(-2deg);
+		background: rgba(238, 222, 178, 0.74);
+		box-shadow: 0 2px 6px rgba(44, 36, 32, 0.14);
+	}
+</style>
+
 <svelte:head>
 	<title>{data.post.title} | Voice of an African Child</title>
 	<meta name="description" content={data.post.excerpt ?? data.post.title} />
@@ -53,39 +85,43 @@
 		</article>
 
 		<section class="shell mx-auto mt-16 max-w-[760px] relative z-10" aria-labelledby="comments-title">
-			<div class="grid gap-5 bg-[#fff9c4] p-6 shadow-lg rotate-[-0.5deg] rounded-sm">
-				<div>
-					<p class="eyebrow">Conversation</p>
-					<h2 id="comments-title" class="m-0 mt-1 font-handwritten text-4xl text-ink-dark">Comments</h2>
-					<p class="mt-2 font-serif text-ink-light">New comments are held for moderation once Supabase is connected.</p>
-				</div>
+			<div class="mb-8">
+				<p class="eyebrow">Conversation</p>
+				<h2 id="comments-title" class="m-0 mt-1 font-handwritten text-4xl text-ink-dark">Comments</h2>
+				<p class="mt-2 font-serif text-ink-light">New comments are held for moderation once Supabase is connected.</p>
+			</div>
 
-				{#if data.canSubmitComments}
-					<form method="POST" action={`/api/comments?returnTo=/posts/${data.post.slug}`} class="grid gap-4 rounded-md border border-paper-line/50 bg-paper-dark/30 p-4">
-					<input type="hidden" name="postId" value={data.post.id} />
-					<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
-						Name
-						<input name="authorName" required minlength="2" maxlength="80" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
-					</label>
-					<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
-						Email
-						<input name="authorEmail" type="email" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
-					</label>
-					<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
-						Comment
-						<textarea name="body" required minlength="3" maxlength="4000" class="w-full min-h-30 resize-y rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors"></textarea>
-					</label>
-					<button class="cursor-pointer rounded-md border-0 bg-ink-dark px-5 py-2.5 text-paper font-serif font-bold hover:bg-accent-ink transition-colors">Submit for moderation</button>
-				</form>
-				{:else}
-					<p class="m-0 rounded-md border border-accent-ink/20 bg-paper-dark/30 p-4 font-serif text-ink-mid leading-relaxed">
+			{#if data.canSubmitComments}
+				<article class="bg-note-2 comment-form-card relative mb-8 overflow-hidden rounded-[3px] border border-ink-dark/12 p-6 shadow-paper">
+					<span class="tape-mark" aria-hidden="true"></span>
+					<form method="POST" action={`/api/comments?returnTo=/posts/${data.post.slug}`} class="relative z-2 grid gap-4">
+						<input type="hidden" name="postId" value={data.post.id} />
+						<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
+							Name
+							<input name="authorName" required minlength="2" maxlength="80" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
+						</label>
+						<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
+							Email
+							<input name="authorEmail" type="email" class="w-full rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors" />
+						</label>
+						<label class="grid gap-1.5 text-sm font-serif font-bold text-ink-mid">
+							Comment
+							<textarea name="body" required minlength="3" maxlength="4000" class="w-full min-h-30 resize-y rounded-md border border-paper-line/60 bg-paper px-3 py-2.5 text-ink-dark focus:border-accent-ink focus:outline-none transition-colors"></textarea>
+						</label>
+						<button class="cursor-pointer rounded-md border-0 bg-ink-dark px-5 py-2.5 text-paper font-serif font-bold hover:bg-accent-ink transition-colors">Submit for moderation</button>
+					</form>
+				</article>
+			{:else}
+				<article class="bg-note-2 comment-form-card relative mb-8 overflow-hidden rounded-[3px] border border-ink-dark/12 p-6 shadow-paper">
+					<span class="tape-mark" aria-hidden="true"></span>
+					<p class="relative z-2 m-0 font-serif text-ink-mid leading-relaxed">
 						Comment posting will switch on after Supabase env vars are added. The UI is wired; the
 						database needs its keys.
 					</p>
-				{/if}
+				</article>
+			{/if}
 
-				<CommentList comments={data.comments} />
-			</div>
+			<CommentList comments={data.comments} />
 		</section>
 	{/if}
 </main>
