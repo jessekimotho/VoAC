@@ -30,12 +30,12 @@
 </svelte:head>
 
 <main>
-	<section class="shell relative grid min-h-[calc(100svh-72px)] place-items-center py-[clamp(3rem,7vw,6rem)]">
-		<div class="hero-paper paper-sheet relative isolate grid min-h-[min(78svh,720px)] w-full place-items-center overflow-hidden px-5 py-18 text-center sm:px-10">
+	<section class="shell relative grid min-h-[calc(100svh-56px)] place-items-center py-[clamp(2rem,5vw,4rem)]">
+		<div class="hero-paper paper-sheet relative isolate grid min-h-[min(60svh,500px)] w-full place-items-center overflow-hidden px-5 py-12 text-center sm:px-10">
 			<div aria-hidden="true" class="absolute left-[7.8%] top-0 h-full w-px bg-margin-red/70"></div>
 			<div aria-hidden="true" class="absolute right-[8%] top-[10%] hidden h-26 w-26 rotate-6 rounded-full border border-accent-blue/30 sm:block"></div>
 			<p class="m-0 font-serif text-xs font-semibold uppercase tracking-[0.34em] text-accent-blue">The archive</p>
-			<h1 class="m-0 max-w-[11ch] font-handwritten text-[clamp(5.2rem,16vw,13.5rem)] leading-[0.73] text-ink-dark">
+			<h1 class="m-0 max-w-[11ch] font-handwritten text-[clamp(3rem,10vw,8rem)] leading-[0.73] text-ink-dark">
 				Voice of an African Child
 			</h1>
 			<div aria-hidden="true" class="mt-7 h-px w-[min(420px,70vw)] bg-ink-dark/30"></div>
