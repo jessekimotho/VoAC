@@ -21,6 +21,10 @@ type PostRow = {
 	post_tags?: Array<{ tags: { name: string; slug: string } | null } | null> | null;
 };
 
+function stripImagesFromHtml(html: string): string {
+	return html.replace(/<img[^>]*>/gi, '');
+}
+
 function normalize(row: PostRow): BlogPost {
 	const tags = row.post_tags
 		?.filter((pt): pt is { tags: { name: string; slug: string } } => pt !== null && pt.tags !== null)
@@ -31,7 +35,7 @@ function normalize(row: PostRow): BlogPost {
 		title: row.title,
 		slug: row.slug,
 		excerpt: row.excerpt ? decodeHtmlEntities(row.excerpt) : null,
-		content_html: row.content_html,
+		content_html: stripImagesFromHtml(row.content_html),
 		status: row.status === 'published' ? 'published' : 'draft',
 		post_type: row.post_type === 'page' ? 'page' : 'post',
 		featured: row.featured,

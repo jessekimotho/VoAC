@@ -8,23 +8,12 @@
 	<title>New post | Voice of an African Child</title>
 </svelte:head>
 
-<main class="shell edit-page">
-	<p class="eyebrow"><a href="/">Home</a></p>
-	<h1>New post</h1>
-	<PostEditorForm post={null} {form} />
+<main class="desk-stage py-10">
+	<div class="shell">
+		<article class="paper-sheet px-[clamp(1.1rem,4vw,4rem)] py-[clamp(1.4rem,5vw,4.5rem)]">
+			<p class="eyebrow"><a href="/" data-sveltekit-prefetch>Home</a></p>
+			<h1 class="m-0 font-handwritten text-[clamp(3rem,9vw,6rem)] leading-[0.92] text-ink-dark">New post</h1>
+			<PostEditorForm post={null} {form} />
+		</article>
+	</div>
 </main>
-
-<style>
-	.edit-page {
-		padding-top: 3rem;
-		min-width: 0;
-		max-width: min(1120px, calc(100vw - 32px));
-	}
-
-	h1 {
-		margin: 0.2rem 0 1.5rem;
-		font-family: Georgia, "Times New Roman", serif;
-		font-size: clamp(3rem, 9vw, 6rem);
-		line-height: 0.92;
-	}
-</style>

@@ -139,10 +139,6 @@
 		text-decoration-thickness: 2px;
 	}
 
-	.rich-content img {
-		@apply mx-auto my-6 block h-auto max-w-full;
-	}
-
 	.rich-content iframe,
 	.rich-content video {
 		@apply max-w-full;
